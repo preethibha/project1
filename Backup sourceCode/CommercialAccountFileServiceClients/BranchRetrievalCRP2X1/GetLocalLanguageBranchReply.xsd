@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/core/extendedbranch" xmlns="http://ei/crp/get_local_language_branch_reply_crp2x1" targetNamespace="http://ei/crp/get_local_language_branch_reply_crp2x1">
+	<xsd:import schemaLocation="ExtendedBranch.xsd" namespace="http://ei/core/extendedbranch">
+	</xsd:import>
+	<xsd:complexType name="GetLocalLanguageBranchReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ExtendedBranch" type="bons0:ExtendedBranch">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BranchLocalLanguageIndicator" type="xsd:boolean">
+				<xsd:annotation><xsd:documentation>This element indicates if any of the data contained in the reply is in a local language.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetLocalLanguageBranchReply" type="GetLocalLanguageBranchReply" /></xsd:schema>

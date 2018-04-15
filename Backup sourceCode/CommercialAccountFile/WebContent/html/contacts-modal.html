@@ -1,0 +1,60 @@
+<div class="login-modal-state contacts">
+	<div id="system-error-messages" style="color: #f24545;">
+    	<span id="contactErrorBox"></span>
+    </div>
+    <div id="pg-header" class="login-modal-header">
+        <h1 class="login-modal-head">Contacts</h1>
+    </div>
+    
+    <div class="message-area info" id="contact-message-area">
+		<div>
+			<img src="images/clear.png">
+				<span id="select-account-message">We are not able to locate a contact for this account. Please contact your local Chubb office. <a target="_blank" href="http://www.chubb.com/marketing/chubb2345.html">Click here</a> to find a Chubb office near you.</span>
+		</div>
+	</div>
+	
+	<div class="high-level-data">
+		<div class="grid contact-pol-details">
+			<div class="col-1-2">
+				<div class="data">
+					<label>Policy Number</label><span id="policyNo"></span>
+				</div>
+				<div class="data">
+					<label>Product</label><span id="productName"></span>
+				</div>
+			</div>
+			<div class="col-1-2">
+				<div class="data">
+					<label>Policy Term</label><span id="policyTerm"></span>
+				</div>
+				<div class="data">
+					<label>Status</label><span id="status"></span>
+				</div>
+			</div>
+		</div>
+	</div><!-- end of .high-level-data -->
+	<div class="modal-body">
+		<div class="data-grid-area">	
+			<div class="data-grid" id="contact-grid-container">
+				<div id="contacts-grid" class="data-headers">
+					<table>
+						<thead>
+							<tr class="active">
+								<th class="_30"><a href="javascript:void(0);" data-sort-method="alpha" data-column-name="name">Name</a></th>
+								<th class="_15"><a href="javascript:void(0);" data-sort-method="alpha" data-column-name="role">Role</a></th>
+								<th class="_15">Work Phone</th>
+								<th class="_15">Cell Phone</th>
+								<th class="_25">Email</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<!-- data blocks -->
+				<div id="contacts-grid-items"></div><!--  end of #data-grid-items -->
+			
+			</div><!-- end of .data-grid -->
+
+		</div><!-- end of .data-grid-area -->
+	</div>
+
+</div> <!-- END .login-modal-state -->

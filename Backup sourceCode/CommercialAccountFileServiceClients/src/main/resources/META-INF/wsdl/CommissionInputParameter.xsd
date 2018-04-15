@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/producer/commission_input_parameter" xmlns="http://ei/producer/commission_input_parameter">
+	<xsd:complexType name="CommissionInputParameter">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="CommissionInputParameterTypeName" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element contains the type of commission input parameters.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CommissionInputParameterName" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element contains the name of the commission input parameter.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CommissionInputParameterValue" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element contains the value that is associated with the commission input parameter name. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="CommissionInputParameter" type="CommissionInputParameter"/>
+</xsd:schema>

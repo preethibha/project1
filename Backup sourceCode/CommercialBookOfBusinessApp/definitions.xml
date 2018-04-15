@@ -1,0 +1,21 @@
+<project name="CommBookOfBusinessAppDef" basedir="." xmlns='antlib:org.apache.tools.ant'>
+
+	<!-- Commercial Book of Business Project Definitions -->
+	
+	<!-- Commercial Book Of Business project -->
+	<property name="dependency.bob.jar" value="CommercialBookOfBusiness.jar" />
+	<property name="dependency.bob.dir" value="${basedir}/../CommercialBookOfBusiness" />
+
+	<!-- Commercial Book Of Business Domain project -->
+	<property name="dependency.bob.domain.jar" value="CommercialBookOfBusinessDomain.jar" />
+	<property name="dependency.bob.domain.dir" value="${basedir}/../CommercialBookOfBusinessDomain" />
+
+	<!-- Commercial Book Of Business Util project -->
+	<property name="dependency.bob.util.jar" value="CommercialBookOfBusinessUtil.jar" />
+	<property name="dependency.bob.util.dir" value="${basedir}/../CommercialBookOfBusinessUtil" />
+	
+	<!-- Commercial Book Of Business (webapp) project -->
+	<property name="dependency.bob.war" value="CommercialBookOfBusinessWeb.war" />
+	<property name="dependency.bob.war.dir" value="${basedir}/../CommercialBookOfBusinessWeb" />	
+	
+</project>

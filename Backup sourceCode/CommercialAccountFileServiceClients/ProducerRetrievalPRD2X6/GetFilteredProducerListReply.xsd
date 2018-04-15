@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/core/status_informationx1" xmlns:bons2="http://ei/producer/get_filtered_producer_list_outputs_prd2x6" xmlns="http://ei/producer/get_filtered_producer_list_reply_prd2x6" targetNamespace="http://ei/producer/get_filtered_producer_list_reply_prd2x6">
+	<xsd:import schemaLocation="GetFilteredProducerListOutputs.xsd" namespace="http://ei/producer/get_filtered_producer_list_outputs_prd2x6">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/status_informationx1" schemaLocation="StatusInformationX1.xsd">
+	</xsd:import>
+
+	<xsd:complexType name="GetFilteredProducerListReply">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="GetFilteredProducerListOutputs" type="bons2:GetFilteredProducerListOutputs">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StatusInformation" type="bons0:StatusInformation">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetFilteredProducerListReply" type="GetFilteredProducerListReply" /></xsd:schema>

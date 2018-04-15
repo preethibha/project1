@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://chubb_corporate/business/change_get_access_user_profile_identifier_request_ebe4x1" targetNamespace="http://chubb_corporate/business/change_get_access_user_profile_identifier_request_ebe4x1">
+	<xsd:complexType name="ChangeGetAccessUserProfileIdentifierRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="UserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is used to sign on to an application.  
+This is also known as RACFId.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SystemId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies internal/external sources of information.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ServiceConsumerSystemId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies internal/external sources of information, from the system that directly invokes an ICC service.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SyntheticTransactionTypeCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element refers to a service functional test which serves no business value.  The intention of the test is to confirm the service is functioning properly.    Some services can be tested fully.
+Other services, such as those that would update a database can only perform a simple ping test.
+Valid values include 'Full' or 'Simple Ping'.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="AdditionalOptionsText" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element specifies which options the consumer wants executed on this service.   For example, this will be coud be used for enrichment.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UserTypeDescription" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element describes the specifc user type.   </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PersonGIN" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a generated identification number associated with a person's External User Id.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NewUserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is used to sign on to an application. UserId is also known as RACFId.  This new Id will
+replace the existing Id.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NewExternalUserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the new user id assigned to a user who needs to access systems from outside Chubb's network.
+This new Id will replace the existing Id.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NewCommonUserGIN" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a new generated id that is used to identify a user across systems.  The new GIN will
+replace the existing GIN.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="ChangeGetAccessUserProfileIdentifierRequest" type="ChangeGetAccessUserProfileIdentifierRequest" /></xsd:schema>

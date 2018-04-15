@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/producer/producer_group_filter" xmlns="http://ei/producer/producer_group_filter">
+	<xsd:complexType name="ProducerGroupFilter">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ProducerGroupName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains name of the Producer Group.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OrganizationCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the code of an organization.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OrganizationTypeAbbreviation" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains an abbreviation that indentifies how business is organized. Valid values for this element are
+'BRANCH' - Branch, 'CORP' - Corporate, 'INDVDL' - Individual 'SBU' - Strategic Business Unit and 'Zone' - Territory.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="ProducerGroupFilter" type="ProducerGroupFilter"/>
+</xsd:schema>

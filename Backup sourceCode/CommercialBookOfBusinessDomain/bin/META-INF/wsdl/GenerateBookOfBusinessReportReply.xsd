@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/reporting/generate_book_of_business_report_reply_rpt3x1" xmlns="http://ei/reporting/generate_book_of_business_report_reply_rpt3x1" xmlns:bons0="http://ei/core/file" xmlns:bons1="http://ei/core/status_informationx2" xmlns:bons2="http://ei/core/source_system_data">
+	<xsd:import namespace="http://ei/core/source_system_data" schemaLocation="SourceSystemData.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/status_informationx2" schemaLocation="StatusInformationX2.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/file" schemaLocation="File.xsd">
+	</xsd:import>
+	<xsd:complexType name="GenerateBookOfBusinessReportReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="File" type="bons0:File"/>
+			<xsd:element minOccurs="0" name="StatusInformation" type="bons1:StatusInformation">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="SourceSystemData" type="bons2:SourceSystemData">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SourceSystemKeyId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the key to the transaction of the policy system or data entry system that originated the transaction.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GenerateBookOfBusinessReportReply" type="GenerateBookOfBusinessReportReply"/>
+</xsd:schema>

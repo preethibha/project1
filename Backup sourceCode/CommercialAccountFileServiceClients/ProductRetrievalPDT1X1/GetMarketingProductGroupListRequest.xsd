@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://ei/product/get_marketing_product_group_list_request_pdt1x1" targetNamespace="http://ei/product/get_marketing_product_group_list_request_pdt1x1">
+	<xsd:complexType name="GetMarketingProductGroupListRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="UserId" type="xsd:string"><xsd:annotation><xsd:documentation>This element is used to sign on to an application.  
+This is also known as RACFId.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SystemId" type="xsd:string"><xsd:annotation><xsd:documentation>This element identifies internal/external sources of information.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ServiceConsumerSystemId" type="xsd:string"><xsd:annotation><xsd:documentation>This element identifies internal/external sources of information, from the system that directly invokes an ICC service.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column. </xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SyntheticTransactionTypeCode" type="xsd:string"><xsd:annotation><xsd:documentation>This element refers to a service functional test which serves no business value.  The intention of the test is to confirm the service is functioning properly.    Some services can be tested fully.
+Other services, such as those that would update a database can only perform a simple ping test.
+Valid values include 'Full' or 'Simple Ping'.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" name="AdditionalOptionsText" type="xsd:string"><xsd:annotation><xsd:documentation>This element specifies which options the consumers wants executed on this service.   For exampe, this will be coud be used for enrichment.
+</xsd:documentation></xsd:annotation>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="DataSourceOptionsText" type="xsd:string"><xsd:annotation><xsd:documentation>This element specifies which data source(s) the consumer wants called for this service when multiple data sources are available.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AsOfDate" type="xsd:date"><xsd:annotation><xsd:documentation>This element contains the search start date.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SubdivisionAbbreviation" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains the abbreviation for the subdivision, such as CCI or ABL.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetMarketingProductGroupListRequest" type="GetMarketingProductGroupListRequest" /></xsd:schema>

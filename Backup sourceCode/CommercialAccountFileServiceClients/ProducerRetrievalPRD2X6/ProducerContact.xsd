@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://ei/producer/producer_contact" targetNamespace="http://ei/producer/producer_contact">
+	<xsd:complexType name="ProducerContact">
+		<xsd:annotation><xsd:documentation>This element contains a person's first name.</xsd:documentation></xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ProducerContactTypeName" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains the name of the type of producer contact.
+Valid options for this element are 'Primary' or 'Executive'.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PrefixName" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains the prefix placed before a person's name.
+Some valid options for this element include 'Mr.', 'Mrs.', 'Dr.'.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GivenName" type="xsd:string">
+				<xsd:annotation><xsd:documentation>This element contains a person's first name.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MiddleInitial" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains the first letter from a person's middle name.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Surname" type="xsd:string">
+				<xsd:annotation><xsd:documentation>This element contains a person's last name.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NameSuffix" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains the suffix that follows a person’s full name and provides additional information about the person. There are academic, honorary, professional, and social name suffixes.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TitleName" type="xsd:string">
+				<xsd:annotation><xsd:documentation>This element contains a person's job title.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EmailAddress" type="xsd:string">
+				<xsd:annotation><xsd:documentation>This element contains a person's e-mail address.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PhoneNumber" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains a person's phone number.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FaxNumber" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains a person's fax number.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="ProducerContact" type="ProducerContact" /></xsd:schema>

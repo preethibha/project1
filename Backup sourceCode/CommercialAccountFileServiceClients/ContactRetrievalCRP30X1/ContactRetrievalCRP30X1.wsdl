@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://ei/core/simplefault" xmlns:bons4="http://ei/corporate/get_policy_contact_list_by_defined_role_request_crp30x1" xmlns:bons6="http://ei/corporate/get_policy_contact_list_by_defined_role_reply_crp30x1" xmlns:tns="http://ei/corporate/contact_retrieval_crp30x1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ContactRetrievalCRP30X1" targetNamespace="http://ei/corporate/contact_retrieval_crp30x1">
+    <wsdl:types>
+    <xsd:schema xmlns:bons0="http://ei/corporate/get_policy_contact_list_reply_crp30x1" xmlns:bons2="http://ei/corporate/get_policy_contact_list_request_crp30x1" xmlns:bons3="http://ei/corporate/get_default_contact_reply_crp30x1" xmlns:bons5="http://ei/corporate/get_default_contact_request_crp30x1" xmlns="http://ei/corporate/contact_retrieval_crp30x1" targetNamespace="http://ei/corporate/contact_retrieval_crp30x1">
+            <xsd:import namespace="http://ei/corporate/get_policy_contact_list_by_defined_role_reply_crp30x1" schemaLocation="GetPolicyContactListByDefinedRoleReply.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_policy_contact_list_by_defined_role_request_crp30x1" schemaLocation="GetPolicyContactListByDefinedRoleRequest.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_default_contact_request_crp30x1" schemaLocation="GetDefaultContactRequest.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_default_contact_reply_crp30x1" schemaLocation="GetDefaultContactReply.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_policy_contact_list_request_crp30x1" schemaLocation="GetPolicyContactListRequest.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_policy_contact_list_reply_crp30x1" schemaLocation="GetPolicyContactListReply.xsd" />
+            <xsd:import namespace="http://ei/core/simplefault" schemaLocation="SimpleFault.xsd" />
+      <xsd:element name="GetPolicyContactList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetPolicyContactListRequest" nillable="true" type="bons2:GetPolicyContactListRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPolicyContactListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetPolicyContactListReply" nillable="true" type="bons0:GetPolicyContactListReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetDefaultContact">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetDefaultContactRequest" nillable="true" type="bons5:GetDefaultContactRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetDefaultContactResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetDefaultContactReply" nillable="true" type="bons3:GetDefaultContactReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+       
+       <xsd:element name="SimpleFaultReply" nillable="true" type="bons1:SimpleFault" />
+            <xsd:element name="GetPolicyContactListByDefinedRole">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetPolicyContactListByDefinedRoleRequest" nillable="true" type="bons4:GetPolicyContactListByDefinedRoleRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetPolicyContactListByDefinedRoleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetPolicyContactListByDefinedRoleReply" nillable="true" type="bons6:GetPolicyContactListByDefinedRoleReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="GetPolicyContactListRequestMsg">
+    <wsdl:part element="tns:GetPolicyContactList" name="GetPolicyContactListParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetPolicyContactListResponseMsg">
+    <wsdl:part element="tns:GetPolicyContactListResponse" name="GetPolicyContactListResult" />
+  </wsdl:message>
+    <wsdl:message name="GetPolicyContactList_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetDefaultContactRequestMsg">
+    <wsdl:part element="tns:GetDefaultContact" name="GetDefaultContactParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetDefaultContactResponseMsg">
+    <wsdl:part element="tns:GetDefaultContactResponse" name="GetDefaultContactResult" />
+  </wsdl:message>
+    <wsdl:message name="GetDefaultContact_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetPolicyContactListByDefinedRoleRequestMsg">
+    <wsdl:part element="tns:GetPolicyContactListByDefinedRole" name="GetPolicyContactListByDefinedRoleParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetPolicyContactListByDefinedRoleResponseMsg">
+    <wsdl:part element="tns:GetPolicyContactListByDefinedRoleResponse" name="GetPolicyContactListByDefinedRoleResult" />
+  </wsdl:message>
+    <wsdl:message name="GetPolicyContactListByDefinedRole_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:portType name="ContactRetrievalCRP30X1">
+    <wsdl:operation name="GetPolicyContactList">
+      <wsdl:input message="tns:GetPolicyContactListRequestMsg" name="GetPolicyContactListRequest" />
+      <wsdl:output message="tns:GetPolicyContactListResponseMsg" name="GetPolicyContactListResponse" />
+      <wsdl:fault message="tns:GetPolicyContactList_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+        <wsdl:operation name="GetDefaultContact">
+      <wsdl:input message="tns:GetDefaultContactRequestMsg" name="GetDefaultContactRequest" />
+      <wsdl:output message="tns:GetDefaultContactResponseMsg" name="GetDefaultContactResponse" />
+            <wsdl:fault message="tns:GetDefaultContact_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+        </wsdl:operation>
+        <wsdl:operation name="GetPolicyContactListByDefinedRole">
+      <wsdl:input message="tns:GetPolicyContactListByDefinedRoleRequestMsg" name="GetPolicyContactListByDefinedRoleRequest" />
+      <wsdl:output message="tns:GetPolicyContactListByDefinedRoleResponseMsg" name="GetPolicyContactListByDefinedRoleResponse" />
+      <wsdl:fault message="tns:GetPolicyContactListByDefinedRole_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

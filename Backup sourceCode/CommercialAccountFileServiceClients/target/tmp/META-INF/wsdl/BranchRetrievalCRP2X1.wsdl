@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="BranchRetrievalCRP2X1" targetNamespace="http://ei/corporate/branch_retrieval_crp2X1" xmlns:bons1="http://ei/corporate/branch_retrieval_crp2X1" xmlns:bons2="http://ei/corporate/get_branch_request_crp2x1" xmlns:bons3="http://ei/crp/get_local_language_request_crp2x1" xmlns:bons4="http://ei/core/simplefault" xmlns:bons5="http://ei/corporate/get_branch_list_reply_crp2x1" xmlns:bons6="http://ei/core/extendedbranch" xmlns:bons7="http://ei/crp/get_local_language_branch_reply_crp2x1" xmlns:bons8="http://ei/corporate/get_producing_branch_list_request_crp2x1" xmlns:bons9="http://ei/corporate/get_producing_branch_list_reply_crp2x1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://ei/corporate/branch_retrieval_crp2X1" xmlns="http://ei/corporate/branch_retrieval_crp2X1" xmlns:tns="http://ei/corporate/branch_retrieval_crp2X1">
+            <xsd:import namespace="http://ei/corporate/get_producing_branch_list_reply_crp2x1" schemaLocation="GetProducingBranchListReply.xsd"/>
+            <xsd:import namespace="http://ei/corporate/get_producing_branch_list_request_crp2x1" schemaLocation="GetProducingBranchListRequest.xsd"/>
+            <xsd:import namespace="http://ei/crp/get_local_language_branch_reply_crp2x1" schemaLocation="GetLocalLanguageBranchReply.xsd"/>
+            <xsd:import namespace="http://ei/crp/get_local_language_request_crp2x1" schemaLocation="GetLocalLanguageBranchRequest.xsd"/>
+            <xsd:import namespace="http://ei/core/extendedbranch" schemaLocation="ExtendedBranch.xsd"/>
+            <xsd:import namespace="http://ei/corporate/get_branch_list_reply_crp2x1" schemaLocation="GetBranchListReply.xsd"/>
+            <xsd:import namespace="http://ei/core/simplefault" schemaLocation="SimpleFault.xsd"/>
+      <xsd:import namespace="http://ei/corporate/get_branch_request_crp2x1" schemaLocation="GetBranchRequest.xsd"/>
+      <xsd:element name="GetBranch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetBranchRequest" nillable="true" type="bons2:GetBranchRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBranchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ExtendedBranch" nillable="true" type="bons6:ExtendedBranch"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="SimpleFault" nillable="true" type="bons4:SimpleFault"/>
+            <xsd:element name="GetBranchList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="AsOfDate" nillable="true" type="xsd:date">
+              <xsd:annotation>
+                <xsd:documentation>This element contains the search start date.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetBranchListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetBranchListReply" nillable="true" type="bons5:GetBranchListReply"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetLocalLanguageBranch">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetLocalLanguageBranchRequest" nillable="true" type="bons3:GetLocalLanguageBranchRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetLocalLanguageBranchResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetLocalLanguageBranchReply" nillable="true" type="bons7:GetLocalLanguageBranchReply"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetProducingBranchList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducingBranchListRequest" nillable="true" type="bons8:GetProducingBranchListRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetProducingBranchListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducingBranchListReply" nillable="true" type="bons9:GetProducingBranchListReply"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="GetBranchRequestMsg">
+    <wsdl:part element="bons1:GetBranch" name="GetBranchParameters"/>
+  </wsdl:message>
+    <wsdl:message name="GetBranchResponseMsg">
+    <wsdl:part element="bons1:GetBranchResponse" name="GetBranchResult"/>
+  </wsdl:message>
+    <wsdl:message name="GetBranch_SimpleFaultReplyMsg">
+    <wsdl:part element="bons1:SimpleFault" name="SimpleFaultReply"/>
+  </wsdl:message>
+    <wsdl:message name="GetBranchListRequestMsg">
+    <wsdl:part element="bons1:GetBranchList" name="GetBranchListParameters"/>
+  </wsdl:message>
+    <wsdl:message name="GetBranchListResponseMsg">
+    <wsdl:part element="bons1:GetBranchListResponse" name="GetBranchListResult"/>
+  </wsdl:message>
+    <wsdl:message name="GetBranchList_SimpleFaultReplyMsg">
+    <wsdl:part element="bons1:SimpleFault" name="SimpleFaultReply"/>
+  </wsdl:message>
+    <wsdl:message name="GetLocalLanguageBranchRequestMsg">
+    <wsdl:part element="bons1:GetLocalLanguageBranch" name="GetLocalLanguageBranchParameters"/>
+  </wsdl:message>
+    <wsdl:message name="GetLocalLanguageBranchResponseMsg">
+    <wsdl:part element="bons1:GetLocalLanguageBranchResponse" name="GetLocalLanguageBranchResult"/>
+  </wsdl:message>
+    <wsdl:message name="GetLocalLanguageBranch_SimpleFaultReplyMsg">
+    <wsdl:part element="bons1:SimpleFault" name="SimpleFaultReply"/>
+  </wsdl:message>
+    <wsdl:message name="GetProducingBranchListRequestMsg">
+    <wsdl:part element="bons1:GetProducingBranchList" name="GetProducingBranchListParameters"/>
+  </wsdl:message>
+    <wsdl:message name="GetProducingBranchListResponseMsg">
+    <wsdl:part element="bons1:GetProducingBranchListResponse" name="GetProducingBranchListResult"/>
+  </wsdl:message>
+    <wsdl:message name="GetProducingBranchList_SimpleFaultReplyMsg">
+    <wsdl:part element="bons1:SimpleFault" name="SimpleFaultReply"/>
+  </wsdl:message>
+    <wsdl:portType name="BranchRetrievalCRP2X1">
+    <wsdl:operation name="GetBranch">
+      <wsdl:input message="bons1:GetBranchRequestMsg" name="GetBranchRequest"/>
+      <wsdl:output message="bons1:GetBranchResponseMsg" name="GetBranchResponse"/>
+            <wsdl:fault message="bons1:GetBranch_SimpleFaultReplyMsg" name="SimpleFaultReply"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetBranchList">
+      <wsdl:input message="bons1:GetBranchListRequestMsg" name="GetBranchListRequest"/>
+      <wsdl:output message="bons1:GetBranchListResponseMsg" name="GetBranchListResponse"/>
+      <wsdl:fault message="bons1:GetBranchList_SimpleFaultReplyMsg" name="SimpleFaultReply"/>
+    </wsdl:operation>
+        <wsdl:operation name="GetLocalLanguageBranch">
+      <wsdl:input message="bons1:GetLocalLanguageBranchRequestMsg" name="GetLocalLanguageBranchRequest"/>
+      <wsdl:output message="bons1:GetLocalLanguageBranchResponseMsg" name="GetLocalLanguageBranchResponse"/>
+      <wsdl:fault message="bons1:GetLocalLanguageBranch_SimpleFaultReplyMsg" name="SimpleFaultReply"/>
+    </wsdl:operation>
+        <wsdl:operation name="GetProducingBranchList">
+      <wsdl:input message="bons1:GetProducingBranchListRequestMsg" name="GetProducingBranchListRequest"/>
+      <wsdl:output message="bons1:GetProducingBranchListResponseMsg" name="GetProducingBranchListResponse"/>
+      <wsdl:fault message="bons1:GetProducingBranchList_SimpleFaultReplyMsg" name="SimpleFaultReply"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

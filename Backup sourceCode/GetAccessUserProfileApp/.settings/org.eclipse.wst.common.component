@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="GetAccessUserProfileApp">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="Jndi.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/chubb/Jndi.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>       
+        <dependent-module archiveName="commons-digester.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/commons/commons-digester.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/commons/commons-beanutils.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaConnect.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/gaConnect.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="enttoolkit.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/enttoolkit.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Sero.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/Sero.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaLogger.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/gaLogger.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaTools.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/gaTools.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaApi.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/gaApi.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaSdk.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/gaSdk.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaConfiguration.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/gaConfiguration.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaDao.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/gaDao.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaSca.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ga/gaSca.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ldapjdk.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/ldap/ldapjdk.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.15.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/log4j/log4j-1.2.15.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="DigitalBusinessCommon.jar" deploy-path="/" handle="module:/resource/DigitalBusinessCommon/DigitalBusinessCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>        
+        <dependent-module archiveName="GetAccessUserProfileUtil.jar" deploy-path="/" handle="module:/resource/GetAccessUserProfileUtil/GetAccessUserProfileUtil">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="GetAccessUserProfilePersistence.jar" deploy-path="/" handle="module:/resource/GetAccessUserProfilePersistence/GetAccessUserProfilePersistence">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="GetAccessUserProfileModel.jar" deploy-path="/" handle="module:/resource/GetAccessUserProfileModel/GetAccessUserProfileModel">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="GetAccessUserProfileDomain.jar" deploy-path="/" handle="module:/resource/GetAccessUserProfileDomain/GetAccessUserProfileDomain">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>        
+        <dependent-module archiveName="GetAccessUserProfile.war" deploy-path="/" handle="module:/resource/GetAccessUserProfile/GetAccessUserProfile">
+            <dependent-object>Module_1434561977163</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>        
+    </wb-module>
+</project-modules>

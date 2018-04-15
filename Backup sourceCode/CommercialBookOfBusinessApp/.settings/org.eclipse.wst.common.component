@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CommercialBookOfBusinessApp">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="CommercialBookOfBusinessUtil.jar" deploy-path="/" handle="module:/resource/CommercialBookOfBusinessUtil/CommercialBookOfBusinessUtil">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommercialBookOfBusiness.jar" deploy-path="/" handle="module:/resource/CommercialBookOfBusiness/CommercialBookOfBusiness">
+            <dependent-object>Module_1424040996240</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommercialBookOfBusinessDomain.jar" deploy-path="/" handle="module:/resource/CommercialBookOfBusinessDomain/CommercialBookOfBusinessDomain">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-digester.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/commons/commons-digester.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/commons/commons-beanutils.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>     
+        <dependent-module archiveName="commons-logging-api-1.1.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/commons/commons-logging-api-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Jndi.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/chubb8_5/Jndi.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>           
+    </wb-module>
+</project-modules>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="CommercialAccountFileServiceClients" default="default" basedir=".">
+
+	<description>
+		This is the Commercial Account File Service Clients sub-project
+    </description>
+
+	<import file="${basedir}/../DigitalBusinessCommon/build-common.xml" id="super.common" />
+	<import file="${basedir}/../CommercialAccountFileApp/definitions.xml" id="definitions" />
+
+	<property name="dist.jar" value="CommercialAccountFileServiceClients.jar" />
+
+	<target name="init">
+
+		<!--  Specify the Libraries to be used only for compiling this project -->
+		<path id="application-dependency.path">
+
+			<!-- Project dependencies -->
+			<pathelement path="${dependency.caf.util.dir}/target/${dependency.caf.util.jar}" />
+			<pathelement path="${dependency.caf.model.dir}/target/${dependency.caf.model.jar}" />
+
+			<!-- J2EE -->
+			<pathelement path="${library.dir}/ibm8_5/j2ee/j2ee.jar" />
+
+		</path>
+
+	</target>
+
+</project>

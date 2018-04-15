@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<%-- tpl:metadata --%>
+	
+<%-- jsf:pagecode language="java" location="/src/main/java/pagecode/templates/StandaloneAppTemplate.java" --%><%-- /jsf:pagecode --%><%-- /tpl:metadata --%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
+<%@taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/cb-icons-and-alerts.css" type="text/css">
+<link href="${pageContext.request.contextPath}/css/grid.css" media="screen" rel="stylesheet" type="text/css" />
+<!--[if gt IE 8]><!-->
+<link href="${pageContext.request.contextPath}/css/chubb.minified.css?20161121" media="screen" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/responsive.minified.css?20161121" media="only screen and (max-width: 1023px)" rel="stylesheet" type="text/css" />
+<!--<![endif]-->
+<!--[if lte IE 8]><link href="css/oldie.minified.css?122324" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+<link href="${pageContext.request.contextPath}/css/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+<style>
+.stand-alone-options #utility-links {
+    float: right;
+    margin-right: 30px;}
+.nav__item.logo img {
+    width: 273px;}
+#message-bar .menu-button {
+    display: none;
+    float: left;}
+.book-of-biz .page-title-area {
+    display: none;}
+#contact-chubb-modules > div {
+    margin-top: 30px;}
+#mobile-logo.stand-alone-app img {
+    height: 35px;
+    margin-left: -22px;
+    padding-bottom: 10px;
+    width: 137px;}
+</style>
+
+<script src="https://static.chubb.com/UXF/atchub/js/head.minified.js?08162013"></script>
+<%-- tpl:insert attribute="headarea" --%><title>AtChubb Standalone App</title><%-- /tpl:insert --%>
+
+</head>
+<f:view>
+	<body>
+
+		<h:inputHidden id="txtUserType" value="#{cafBean.userType}"></h:inputHidden>
+		<h:inputHidden id="txtUserId" value="#{cafBean.userId}"></h:inputHidden>
+
+		<div id="container">
+			<div id="wrapper">
+        	
+        		<div id="navigation-wrap">
+					<a id="navigation-heading" href="#"><span>Home</span></a>
+
+					<div id="tabs" role="navigation" data-module-type="MainNav">
+						<div id="tabs-internal">
+	
+							<div class="nav__item logo">
+								<a href="#" class="nav__link"><img alt="Contact Chubb Logo" src="${pageContext.request.contextPath}/images/logo_2x_contact_cb.png" /></a>
+							</div>
+						</div>
+					</div>
+					<!-- END #tabs -->
+				
+					<div id="session_nav" class="stand-alone-options">
+						<ul id="utility-links">
+							<li><a id="contactUs" href="http://www.chubb.com/marketing/chubb2340.html">Contact Us</a></li>
+							<!--li><a onclick="oo_inline.show()" href="#">Site Feedback [+]</a></li-->		 					
+						</ul>
+					</div>
+
+				</div>
+				<!-- end #navigation-wrap -->
+				<div id="message-bar" class="drawer-ui" data-module-type="MessageBar">
+					<a href="#" class="menu-button" data-module-type="MobileMenu"> <span>Menu</span> 
+					</a>
+					<div id="mobile-logo" class="stand-alone-app">
+						<a href="#"><img alt="Chubb logo for mobile"
+							src="${pageContext.request.contextPath}/images/mobile_logo.png" /></a>
+					</div>
+				</div>
+
+		<%-- tpl:insert attribute="bodyarea" --%>Default content of bodyarea<%-- /tpl:insert --%>
+
+			<div id="footer">
+				<div id="footer-links">
+					<div class="footer-link"><a href="http://www.chubb.com/marketing/chubb2275.html" onclick="return jsPageManager.processClick(this, 'FT');" target="_blank">Legal Notices</a></div>
+					<div class="footer-link"><a href="http://www.chubb.com/marketing/chubb2267.html" onclick="return jsPageManager.processClick(this, 'FT');" target="_blank">Privacy Policy</a></div>			
+					<!--div class="footer-link"><a href="http://www.chubb.com/marketing/chubb7450.html" onclick="return jsPageManager.processClick(this, 'FT');" target="_blank">Producer Compensation</a></div-->
+					<div class="footer-link"><a href="http://jobs.chubb.com/" onclick="return jsPageManager.processClick(this, 'FT');" target="_blank">Careers</a></div>
+					<div class="footer-link"><a href="http://www.chubb.com/marketing/chubb2340.html" onclick="return jsPageManager.processClick(this, 'FT');" target="_blank">Contact Us</a></div>
+					<p>Copyright &copy; 1995-<script type="text/javascript">document.write(new Date().getFullYear());</script> The Chubb Corporation</p>
+				</div>
+				<div class="social-links">
+					<a href="https://twitter.com/ChubbInsurance" onclick="return jsPageManager.processClick(this, 'SL');" target="_blank" class="social-twitter">Twitter</a>
+					<a href="http://www.facebook.com/#!/pages/Chubb-Insurance/195143962298?ref=ts" onclick="return jsPageManager.processClick(this, 'SL');" target="_blank" class="social-facebook">Facebook</a>
+					<a href="http://www.youtube.com/user/ChubbInsurance" onclick="return jsPageManager.processClick(this, 'SL');" target="_blank" class="social-youtube">YouTube</a>
+					<a href="http://www.chubb.com/marketing/chubb9386.html" onclick="return jsPageManager.processClick(this, 'SL');" target="_blank" class="social-rss">RSS</a>
+				</div>
+			</div>
+			
+		    </div><!--end of wrapper -->
+    	</div><!--end of container -->
+    	
+    	
+		<script type="text/javascript">
+	        /*setting dojoConfig as follow to avoid unsecure content messages to the user */
+	        dojoConfig = {
+	            parseOnLoad: true,
+	            baseUrl: 'https://static.chubb.com/dojo-release-1.6.1/dojo/',
+	            dojoBlankHtmlUrl: 'resources/blank.html',
+	            modulePaths: {
+	                "dojo": "https://static.chubb.com/dojo-release-1.6.1/dojo",
+	                "dijit": "https://static.chubb.com/dojo-release-1.6.1/dijit",
+	                "dojox": "https://static.chubb.com/dojo-release-1.6.1/dojox"
+	            }
+	        }; 
+	
+	    </script> 
+
+	    <script src="https://static.chubb.com/dojo-release-1.6.1/dojo/dojo.xd.js"></script>
+		<script src="${pageContext.request.contextPath}/js/main.minified.js?08162014"></script> 
+		<script src="${pageContext.request.contextPath}/js/application.js?08152014"></script> 
+
+
+
+	
+		<!-- Web Analytics Page Tagging Code -->
+		<script type="text/javascript">
+		 var NTPT_SET_IDCOOKIE = true;
+		 var NTPT_IDCOOKIE_NAME = "cbSessionID";
+		 var NTPT_IDCOOKIE_DOMAIN = ".chubb.com";
+		</script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/chubbpt.js"></script>
+		<noscript>
+			<img src="${pageContext.request.contextPath}/images/cbanalytics.gif?js=0" height="1" width="1" border="0" hspace="0" vspace="0" alt="">
+		</noscript>
+		<!-- Web Analytics Page Tagging Code end -->
+		
+		
+		
+		<!--
+		OnlineOpinion v5.7
+		Released: 3/6/2013. Compiled 03/06/2013 01:59:16 PM -0600
+		Branch: master 8d549bbb6d7ff935b4572cf4e62e305e6cd843d7
+		Components: Full
+		The following code is Copyright 1998-2013 Opinionlab, Inc.  All rights reserved. Unauthorized use is prohibited. This product and other products of OpinionLab, Inc. are protected by U.S. Patent No. 6606581, 6421724, 6785717 B1 and other patents pending. http://www.opinionlab
+		-->
+		
+		<!-- MAIN OL STYLESHEET -->
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/onlineopinionv5/oo_style.css" />
+		<!-- MAIN OL ENGINE -->
+		<script type="text/javascript" charset="windows-1252" src="${pageContext.request.contextPath}/onlineopinionv5/oo_engine.min.js"></script>
+		
+		<!-- FEEDBACK CONFIGURATION -->
+		<script type="text/javascript" charset="windows-1252" src="${pageContext.request.contextPath}/onlineopinionv5/oo_conf_inline.js"></script>
+		<noscript>This JavaScript enables OnlineOpinion, a method for collecting secure feedback data.</noscript>
+		<!-- END: OnlineOpinion v5.7 -->
+		
+		<!--  Initialize process to build the Mega Menu -->
+		<script type="text/javascript">
+
+		</script>
+	
+		<%-- tpl:insert attribute="additional_js" --%>
+		<script type="text/javascript">
+		/* add js here for a particular page */
+		
+		</script>
+		<%-- /tpl:insert --%>
+			
+			
+	</body>
+</f:view>
+</html>

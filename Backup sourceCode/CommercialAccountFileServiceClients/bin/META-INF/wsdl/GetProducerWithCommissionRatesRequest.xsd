@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/producer/get_producer_with_commission_rates_request_prd2x6" xmlns="http://ei/producer/get_producer_with_commission_rates_request_prd2x6" xmlns:bons0="http://ei/producer/get_producer_with_commission_rates_inputs_prd2x6" xmlns:bons1="http://ei/producer/commission_input_parameter">
+	<xsd:import namespace="http://ei/producer/commission_input_parameter" schemaLocation="CommissionInputParameter.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/producer/get_producer_with_commission_rates_inputs_prd2x6" schemaLocation="GetProducerWithCommissionRatesInputs.xsd">
+	</xsd:import>
+	<xsd:complexType name="GetProducerWithCommissionRatesRequest">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="GetProducerWithCommissionRatesInputs" type="bons0:GetProducerWithCommissionRatesInputs">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="ProducerNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is a Chubb ID number for an agent or broker
+This is also known as the Agent Number.
+The AGTAGDA1 Corporate Table contains valid values for this element in the "AGT_N" column.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerSubNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies a subdivision of business within an agent or broker.
+This also known as Sub Agent Number or Sub Producer Number.
+The AGTAGDA1 Corporate Table contains valid values for this element in the "SUB_AGT_N" column.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="AdditionalOptionsText" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element specifies which options the consumers wants executed on this service.   For exampe, this will be coud be used for enrichment.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AsOfDate" type="xsd:date">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the search start date.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SourceSystemTransactionTypeName" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is the name of the transaction type as it is called by the source system. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BookingEntryTypeCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a code identifying the type of financial booking transaction being processed.
+The E1T00271 Corporate Table contains valid values for this element in the "ENT_TY_C" column and the rows relevant to booking.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="WritingCompanyCode" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element specifies the code for an indivdual company that issues policies within The Chubb Insurance Group (also known as InsurerNumber). 
+The E1T00011 Corporate Table contains valid values for this element in the "WTE_CO_C" column. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is used to sign on to an application.  
+This is also known as RACFId.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SystemId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies internal/external sources of information.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ServiceConsumerSystemId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies internal/external sources of information, from the system that directly invokes an ICC service.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PASSourceProducerCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the code assigned to the producer in the ACE PAS system.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UserTypeDescription" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element describes the specifc user type.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="CommissionInputParameter" type="bons1:CommissionInputParameter">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerClassificationName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a name that describes the classification of the producer (retail or wholesale).</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetProducerWithCommissionRatesRequest" type="GetProducerWithCommissionRatesRequest"/>
+</xsd:schema>

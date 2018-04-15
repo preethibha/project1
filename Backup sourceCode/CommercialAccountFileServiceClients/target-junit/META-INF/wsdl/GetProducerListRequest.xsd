@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/producer/get_producer_list_request_prd2x6" xmlns="http://ei/producer/get_producer_list_request_prd2x6" xmlns:bons1="http://ei/producer/get_producer_list_inputs_prd2x6">
+	<xsd:import namespace="http://ei/producer/get_producer_list_inputs_prd2x6" schemaLocation="GetProducerListInputs.xsd">
+	</xsd:import>
+	<xsd:complexType name="GetProducerListRequest">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="GetProducerListInputs" type="bons1:GetProducerListInputs">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="AdditionalOptionsText" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element specifies which options the consumer wants executed on this service.   For example, this be could be used for enrichment.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ExternalUserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the user id assigned to a user who needs to access systems from outside Chubb's network. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ExternalVendorUserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains an external vendor user id that is assigned by a vendor, but is known to Chubb and will be used to translate to the appropriate Chubb id so it can be used to call internal systems.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is used to sign on to an application.  
+This is also known as RACFId.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SystemId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies internal/external sources of information.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ServiceConsumerSystemId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies internal/external sources of information, from the system that directly invokes an ICC service.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="LineOfBusinessTypeCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element indicates if this is transaction is on behalf a Commercial or Personal Policy. Valid values are: "C" or "P".</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetProducerListRequest" type="GetProducerListRequest"/>
+</xsd:schema>

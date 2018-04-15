@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="CommercialBookOfBusinessUtil" default="default" basedir=".">
+
+	<description>
+		This is the Commercial Book of Business Util sub-project
+    </description>
+
+	<import file="${basedir}/../DigitalBusinessCommon/build-common.xml" id="super.common" />
+	<import file="${basedir}/../CommercialBookOfBusinessApp/definitions.xml" id="definitions" />
+
+	<property name="dist.jar" value="CommercialBookOfBusinessUtil.jar" />
+
+	<target name="init">
+
+		<!--  Specify the Libraries to be used only for compiling this project -->
+		<path id="application-dependency.path">
+
+			<!-- Commons -->
+			<fileset dir="${library.dir}/commons">
+				<include name="**/*.jar" />
+			</fileset>
+
+			<!-- Chubb -->
+			<pathelement path="${library.dir}/chubb8_5/Jndi.jar" />
+
+		</path>
+
+	</target>
+
+</project>

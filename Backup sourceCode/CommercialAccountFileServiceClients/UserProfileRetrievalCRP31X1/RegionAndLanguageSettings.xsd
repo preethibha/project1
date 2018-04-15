@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://ei/core/time_zone" xmlns:bons1="http://ei/core/languagex1" xmlns="http://ei/core/region_and_language_settings" targetNamespace="http://ei/core/region_and_language_settings">
+	<xsd:import schemaLocation="TimeZone.xsd" namespace="http://ei/core/time_zone">
+	</xsd:import>
+	<xsd:import schemaLocation="LanguageX1.xsd" namespace="http://ei/core/languagex1">
+	</xsd:import>
+	<xsd:complexType name="RegionAndLanguageSettings">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Language" type="bons1:Language">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TimeZone" type="Q1:TimeZone">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="RegionAndLanguageSettings" type="RegionAndLanguageSettings" /></xsd:schema>

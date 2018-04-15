@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://ei/crm/commercial_customer_search_crm4x4" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://ei/crm/commercial_customer_search_crm4x4_http" name="CommercialCustomerSearchCRM4X4Http" targetNamespace="http://ei/crm/commercial_customer_search_crm4x4_http">
+  <wsdl:import location="CommercialCustomerSearchCRM4X4.wsdl" namespace="http://ei/crm/commercial_customer_search_crm4x4" />
+  <wsdl:binding name="CommercialCustomerSearchCRM4X4HttpBinding" type="Port_0:CommercialCustomerSearchCRM4X4">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NameSearchByAllPrimaryNames">
+      <soap:operation soapAction="NameSearchByAllPrimaryNames" />
+      <wsdl:input name="NameSearchByAllPrimaryNamesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NameSearchByAllPrimaryNamesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SimpleFaultReply">
+        <soap:fault name="SimpleFaultReply" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearchByAllNames">
+      <soap:operation soapAction="NameSearchByAllNames" />
+      <wsdl:input name="NameSearchByAllNamesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NameSearchByAllNamesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SimpleFaultReply">
+        <soap:fault name="SimpleFaultReply" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+       <wsdl:operation name="NameSearch">
+      <soap:operation soapAction="NameSearch" />
+      <wsdl:input name="NameSearchRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NameSearchResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SimpleFaultReply">
+        <soap:fault name="SimpleFaultReply" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommercialCustomerSearchCRM4X4HttpService">
+    <wsdl:port binding="this:CommercialCustomerSearchCRM4X4HttpBinding" name="CommercialCustomerSearchCRM4X4HTTP_CommercialCustomerSearchCRM4X4HttpPort">
+      <soap:address location="Contact ICC for CommercialCustomerSearchCRM4X4 Endpoint" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

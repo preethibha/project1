@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://chubb_corporate/business/get_access_user_profile_list_outputs_ebe4x1" xmlns:bons1="http://chubb_corporate/get_access/status_information" xmlns="http://chubb_corporate/business/get_access_user_profile_list_reply_ebe4x1" targetNamespace="http://chubb_corporate/business/get_access_user_profile_list_reply_ebe4x1">
+	<xsd:import schemaLocation="StatusInformation.xsd" namespace="http://chubb_corporate/get_access/status_information">
+	</xsd:import>
+	<xsd:import schemaLocation="GetAccessUserProfileListOutputs.xsd" namespace="http://chubb_corporate/business/get_access_user_profile_list_outputs_ebe4x1">
+	</xsd:import>
+	<xsd:complexType name="GetAccessUserProfileListReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="GetAccessUserProfileListOutputs" type="bons0:GetAccessUserProfileListOutputs" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StatusInformation" type="bons1:StatusInformation">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetAccessUserProfileListReply" type="GetAccessUserProfileListReply" /></xsd:schema>

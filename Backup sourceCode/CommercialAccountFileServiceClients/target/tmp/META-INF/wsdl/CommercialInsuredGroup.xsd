@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/crm/commercial_insured_group" xmlns="http://ei/crm/commercial_insured_group">
+	<xsd:complexType name="CommercialInsuredGroup">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="CommercialInsuredGroupId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the id of the Commercial Insured Group.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CommercialInsuredGroupName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the name of the commercial insured group.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="CommercialInsuredGroup" type="CommercialInsuredGroup"/>
+</xsd:schema>

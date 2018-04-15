@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/crm/name_search_by_all_primary_names_outputs_crm4x4" xmlns="http://ei/crm/name_search_by_all_primary_names_reply_crm4x4" targetNamespace="http://ei/crm/name_search_by_all_primary_names_reply_crm4x4">
+	<xsd:import schemaLocation="NameSearchByAllPrimaryNamesOutputs.xsd" namespace="http://ei/crm/name_search_by_all_primary_names_outputs_crm4x4">
+	</xsd:import>
+	<xsd:complexType name="NameSearchByAllPrimaryNamesReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="NameSearchByAllPrimaryNamesOutputs" type="bons0:NameSearchByAllPrimaryNamesOutputs" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MoreDataAvailableIndicator" type="xsd:boolean"><xsd:annotation><xsd:documentation>This element is used to indicate if more data is available that is not being returned.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="NameSearchByAllPrimaryNamesReply" type="NameSearchByAllPrimaryNamesReply" /></xsd:schema>

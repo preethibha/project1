@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="CommercialInsuredGroupPolicyRetrievalCRM33X1" targetNamespace="http://ei/crm/commercial_insured_group_policy_retrieval_crm33x1" xmlns:bons1="http://ei/core/simplefault" xmlns:bons2="http://ei/crm/get_commercial_insured_group_policy_list_reply_crm33x1" xmlns:bons3="http://ei/crm/get_commercial_insured_group_policy_list_request_crm33x1" xmlns:tns="http://ei/crm/commercial_insured_group_policy_retrieval_crm33x1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://ei/crm/commercial_insured_group_policy_retrieval_crm33x1" xmlns="http://ei/crm/commercial_insured_group_policy_retrieval_crm33x1">
+      <xsd:import namespace="http://ei/crm/get_commercial_insured_group_policy_list_request_crm33x1" schemaLocation="GetCommercialInsuredGroupPolicyListRequest.xsd"/>
+      <xsd:import namespace="http://ei/crm/get_commercial_insured_group_policy_list_reply_crm33x1" schemaLocation="GetCommercialInsuredGroupPolicyListReply.xsd"/>
+      <xsd:import namespace="http://ei/core/simplefault" schemaLocation="SimpleFault.xsd"/>
+      <xsd:element name="GetCommercialInsuredGroupPolicyList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetCommercialInsuredGroupPolicyListRequest" nillable="true" type="bons3:GetCommercialInsuredGroupPolicyListRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCommercialInsuredGroupPolicyListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetCommercialInsuredGroupPolicyListReply" nillable="true" type="bons2:GetCommercialInsuredGroupPolicyListReply"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SimpleFaultReply" nillable="true" type="bons1:SimpleFault"/>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="GetCommercialInsuredGroupPolicyListRequestMsg">
+    <wsdl:part element="tns:GetCommercialInsuredGroupPolicyList" name="GetCommercialInsuredGroupPolicyListParameters"/>
+  </wsdl:message>
+    <wsdl:message name="GetCommercialInsuredGroupPolicyListResponseMsg">
+    <wsdl:part element="tns:GetCommercialInsuredGroupPolicyListResponse" name="GetCommercialInsuredGroupPolicyListResult"/>
+  </wsdl:message>
+    <wsdl:message name="GetCommercialInsuredGroupPolicyList_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply"/>
+  </wsdl:message>
+    <wsdl:portType name="CommercialInsuredGroupPolicyRetrievalCRM33X1">
+    <wsdl:operation name="GetCommercialInsuredGroupPolicyList">
+      <wsdl:input message="tns:GetCommercialInsuredGroupPolicyListRequestMsg" name="GetCommercialInsuredGroupPolicyListRequest"/>
+      <wsdl:output message="tns:GetCommercialInsuredGroupPolicyListResponseMsg" name="GetCommercialInsuredGroupPolicyListResponse"/>
+      <wsdl:fault message="tns:GetCommercialInsuredGroupPolicyList_SimpleFaultReplyMsg" name="SimpleFaultReply"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

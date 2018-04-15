@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/producer/non_resident_producer_license_information" xmlns="http://ei/producer/non_resident_producer_license_information">
+	<xsd:complexType name="NonResidentProducerLicenseInformation">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="PostalStateAbbreviation" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+This element is the two character US Postal State Abbreviation. 
+The E1T00111 Corporate Table contains valid values for this element in the "PSTL_ST_AB" column. 
+				</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NonResidentProducerStateLicenseNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the non-resident licensed Producer Number.
+
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="LicenseTypeCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a code used to identify if this non-resident producer holds a license as an agent or a broker.
+
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SpecialArrangementProducerRequiredIndicator" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>This element indicates is a special arrangement producer is required.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="NonResidentProducerLicenseInformation" type="NonResidentProducerLicenseInformation"/>
+</xsd:schema>

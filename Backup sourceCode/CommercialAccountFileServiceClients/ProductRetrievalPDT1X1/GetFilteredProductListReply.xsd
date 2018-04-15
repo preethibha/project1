@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/core/status_informationx2" xmlns:bons1="http://ei/core/product" xmlns="http://ei/product/get_filtered_product_list_reply_pdt1x1" targetNamespace="http://ei/product/get_filtered_product_list_reply_pdt1x1">
+	<xsd:import schemaLocation="Product.xsd" namespace="http://ei/core/product">
+	</xsd:import>
+	<xsd:import schemaLocation="StatusInformationX2.xsd" namespace="http://ei/core/status_informationx2">
+	</xsd:import>
+	<xsd:complexType name="GetFilteredProductListReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Product" type="bons1:Product" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StatusInformation" type="bons0:StatusInformation">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetFilteredProductListReply" type="GetFilteredProductListReply" /></xsd:schema>

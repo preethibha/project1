@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://ei/corporate/get_default_contact_inputs_crp30x1" targetNamespace="http://ei/corporate/get_default_contact_inputs_crp30x1">
+	<xsd:complexType name="GetDefaultContactInputs">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="PolicyTypeCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>
+This element identifies the type of the insurance contract with a code.
+The Corporate table E1T00221 contain the valid values for this element in the "POL_TY_C" column.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PolicyTypeSubCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>						
+The element is used to divide Policy Type Code in order to provide more categories for some insurance contracts.  This is also known as PolicySubTypeCode.
+The Corporate table E1T00221 contain the valid values for this element if the "POL_SUB_TY_C" column.					
+							</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BranchNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>
+This element specifies the number of the Chubb office that receives premium credit for a policy.
+The E1T00031 Corporate Table contains valid values for this element in the "BR_LOC_N" column.
+						</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="InsurerProductCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies a product that the Chubb offers to its Insureds/Customers.
+Values for this element are available in the Product Catalog.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StrategicBusinessUnitCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies a business unit within Chubb as defined in corporate
+table E1T01181.  Valid values are numeric codes representing  ABL, CCI, CPI, 
+CSI, SUR and CSF. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MarketingProductGroupCode" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains a code that  identifies a Product Group that has been defined from a Marketing perspective.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" name="ContactTypeAbbreviation" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains a code which identifies the type of contact that an individual is in relation to the business.   
+Valid values  for this element can be found in application specific reference tables or in the Enterpise Business Party Role Code table (E1T01611).</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetDefaultContactInputs" type="GetDefaultContactInputs" /></xsd:schema>

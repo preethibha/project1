@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.jst.j2ee.commonarchivecore.looseconfig:LooseArchive xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.eclipse.jst.j2ee.commonarchivecore.looseconfig="commonarchive.looseconfig.xmi" uri="C:\Preeti\caf\CommercialAccountFileServiceClientsSampleEAR" binariesPath="C:\Preeti\caf\CommercialAccountFileServiceClientsSampleEAR" resourcesPath="C:\Preeti\caf\CommercialAccountFileServiceClientsSampleEAR" archiveType="EAR">
+  <looseChildren uri="CommercialAccountFileServiceClientsSample.war" binariesPath="C:\Preeti\caf\CommercialAccountFileServiceClientsSample\WebContent" resourcesPath="C:\Preeti\caf\CommercialAccountFileServiceClientsSample\WebContent" archiveType="WAR">
+    <looseChildren uri="WEB-INF/lib/CommercialAccountFileServiceClients.jar" binariesPath="C:\Preeti\caf\CommercialAccountFileServiceClients\bin" resourcesPath="C:\Preeti\caf\CommercialAccountFileServiceClients\bin" archiveType="SIMPLEJAR"/>
+  </looseChildren>
+  <looseChildren uri="WEB-INF/lib/CommercialAccountFileServiceClients.jar" binariesPath="C:\Preeti\caf\CommercialAccountFileServiceClients\bin" resourcesPath="C:\Preeti\caf\CommercialAccountFileServiceClients\bin" archiveType="SIMPLEJAR"/>
+</org.eclipse.jst.j2ee.commonarchivecore.looseconfig:LooseArchive>

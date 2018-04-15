@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/producer/producer_identifierx1" xmlns:bons1="http://ei/core/policy_type_identifierx1" xmlns="http://ei/producer/get_filtered_producer_list_inputs_prd2x5" targetNamespace="http://ei/producer/get_filtered_producer_list_inputs_prd2x5">
+	<xsd:import schemaLocation="PolicyTypeIdentifierX1.xsd" namespace="http://ei/core/policy_type_identifierx1">
+	</xsd:import>
+	<xsd:import schemaLocation="ProducerIdentifierX1.xsd" namespace="http://ei/producer/producer_identifierx1">
+	</xsd:import>
+	<xsd:complexType name="GetFilteredProducerListInputs">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ProducerIdentifier" type="bons0:ProducerIdentifier" maxOccurs="unbounded">
+				<xsd:annotation>
+          
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PolicyTypeIdentifier" type="bons1:PolicyTypeIdentifier" maxOccurs="unbounded">
+				<xsd:annotation>
+          
+        <xsd:documentation> </xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetFilteredProducerListInputs" type="GetFilteredProducerListInputs" /></xsd:schema>

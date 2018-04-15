@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/crm/policy_termx6" xmlns="http://ei/crm/policy_termx6" xmlns:bons0="http://ei/corporate/underwriter_assistantx1" xmlns:bons1="http://ei/corporate/account_service_representativex1" xmlns:bons10="http://ei/crm/insuredx5" xmlns:bons11="http://ei/core/insurerx1" xmlns:bons14="http://ei/core/branchx1" xmlns:bons15="http://ei/core/departmentx1" xmlns:bons16="http://ei/crm/coinsurancex1" xmlns:bons17="http://ei/core/insurance_admin_role" xmlns:bons2="http://ei/crm/production_office_informationx1" xmlns:bons3="http://ei/corporate/customer_service_representativex1" xmlns:bons5="http://ei/corporate/underwriterx1" xmlns:bons6="http://ei/crm/policy_termx6" xmlns:bons7="http://ei/producer/producerx4" xmlns:bons8="http://ei/core/customer_groupx2">
+	<xsd:import namespace="http://ei/corporate/customer_service_representativex1" schemaLocation="CustomerServiceRepresentativeX1.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/corporate/account_service_representativex1" schemaLocation="AccountServiceRepresentativeX1.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/corporate/underwriter_assistantx1" schemaLocation="UnderwriterAssistantX1.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/corporate/underwriterx1" schemaLocation="UnderwriterX1.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/crm/production_office_informationx1" schemaLocation="ProductionOfficeInformationX1.xsd">
+	</xsd:import>
+
+
+
+
+	<xsd:import namespace="http://ei/core/insurance_admin_role" schemaLocation="InsuranceAdminRole.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/crm/coinsurancex1" schemaLocation="CoinsuranceX1.xsd">
+	</xsd:import>
+
+	<xsd:import namespace="http://ei/core/departmentx1" schemaLocation="DepartmentX1.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/branchx1" schemaLocation="BranchX1.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/producer/producerx4" schemaLocation="ProducerX4.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/insurerx1" schemaLocation="InsurerX1.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/crm/insuredx5" schemaLocation="InsuredX5.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/customer_groupx2" schemaLocation="CustomerGroupX2.xsd">
+	</xsd:import>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<xsd:complexType name="PolicyTerm">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="CustomerGroup" type="bons8:CustomerGroup">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Insured" type="bons10:Insured">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Insurer" type="bons11:Insurer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Producer" type="bons7:Producer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducingBranch" type="bons14:Branch">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducingDepartment" type="bons15:Department">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ServicingArea" type="bons8:CustomerGroup">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ServicingBranch" type="bons14:Branch">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AdditionalPolicyDetail">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element maxOccurs="3" minOccurs="0" name="CommodityCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element specifies a type of cargo being shipped.
+There can be up to three occurences of this element.
+The E1T01421 Corporate Table contains the valid values for this element in the "CMDTY_C" column.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element maxOccurs="3" minOccurs="0" name="TypeBusinessCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>					
+This element contains a code which identifies the type of coverage provided.   
+There can be up to three occurences of the element.
+(This is also known as Commercial Inland Marine(CIM) Classification Code or the Insurance Services Office Type Of Business Code 1, 2, and 3)
+The Corporate table E1T00391 contains the valid values for this element in the "CIM_CLS_C" column.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element maxOccurs="3" minOccurs="0" name="RiskClassCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element is used to identify a classification of Risk by Operation.
+There can be up to three occurences of this element.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="NonRenewalIndicator" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element specifies whether a policy should be non-renewed in the Client / WIP system.  
+Valid options for this element are 'Y' or 'N'. 
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="MasterDICIndicator" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element specifies whether a policy is a "master" policy in a multinational program.  
+Valid options for this element are 'Y' or 'N'. 
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="UnderlyerIndicator" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element specifies whether a policy is an "underlyer" policy in a multinational program.  
+Valid options for this element are 'Y' or 'N'. 
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="APEXPolicyIndicator" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element indicates if a policy has been rated in the APEX system.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="MajorCountryCode" type="xsd:string">
+							<xsd:annotation>
+								
+							<xsd:documentation>This element contains the code for the country in which the coverage is being provided.
+The E1T00101 Corporate table contains the valid values for this element in the "CNTRY_C" column.
+
+
+						</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="WIPTransactionDescription" type="xsd:string">
+							<xsd:annotation>
+								
+							<xsd:documentation>This element contains the name of the transaction in the Client / WIP system.  
+The E1T00271 Corporate Table contains valid values for this element in the "WIP_TRNSLT_TY_AB" column.
+
+
+ 							</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ReinsuranceIndicator" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element indicates whether a policy is reinsured, either in full or part, to another insurance company or companies.
+Valid options for this element are 'Y' or 'N'.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ReinsuranceAssumedCompanyCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element specifies the Insurance Company from which the Chubb Group of Insurance Companies assumed the risk.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="WIPTransactionDB2Timestamp" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element specifies the timestamp when the transaction was created. 
+The timestamp is in a DB2 format and it is only used by the WIP system. </xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyAnnualAggregateLimit" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>The element is the maximum amount which an Insurance Company agrees to pay in case of loss for one year.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AutomatedRenewalTypeCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element identifies policies where renewal processing has been streamlined and this business is not negotiated prior to issuance.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyFormTypeCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>The element is the form on which the policy is written.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="RateOfferedPercent" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element specifies the percent that represents of increase or decrease to the premium that was offered to an insured for a specific policy.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyLimit" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element represents the maximum amount payable by the insurer as the result of a claim under a policy.  </xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="LossLimitOfInsuranceAmount" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element contains the maximum amount that will be paid per event for all coverages at all locations on the polocy by the insurer in the event of a catastrophic loss.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AutomatedRenewalTypeAbbreviation" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains an abbreviation that identifies policies where renewal processing has been streamlined and this business is not negotiated prior to issuance.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AutomatedRenewalTypeShortName" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element identifies policies where renewal processing has been streamlined and this business is not negotiated prior to issuance.
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AutomatedRenewalTypeName" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element identifies policies where renewal processing has been streamlined and this business is not negotiated prior to issuance.
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ReinsuranceAssumedCategoryCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains a code that identifies the type of assumed reinsurance.
+Valid values for this element are spaces, '1' (pro-rata reinsurance) or '2' (excess reinsurance)
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="UnderwritingYear" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains the year a policy passed risk selection and classified according to its degree of insurability. It contains the first year of the policy for policies underwritten on a multiple year basis. 
+This element generally contains the year component of the Policy Inception Date.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="LongTermContractIndicator" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element specifies whether the policy term is considered a long term contract.
+Valid values for this element are 'Y' or 'N'.
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="NAAssumedIndicator" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element specifies whether or not a US or Canadian Branch is assuming reinsurance on the Underlying Policy.
+Valid options for this element are 'Y' or 'N'.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="NAAssumedPolicyNumber" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element is the Policy Number of a U.S. or Canadian assumed reinsurance policy.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="SpecialRiskIndicator" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element specifies whether Special Risk Control procedures are required.
+Valid options for this element are 'Y' or 'N'.
+
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AggregateLimit" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element is the maximum dollar amount available to pay for damages during the course of a policy term.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AccidentPolicyCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element is a code that specifies the type of coverage on an Accident Policy.
+Valid values for this element are:
+1-Group Blanket or Company
+2-Group Volume
+3-Individual
+4-Other
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="LineOfBusinessTypeCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element indicates if this is transaction is on behalf a Commercial or Personal Policy.
+Valid values are: "C" or "P".</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="SubmissionDate" type="xsd:date">
+							<xsd:annotation>
+                <xsd:documentation>This element indentifies the date when the underwriter receives the documentation which will allow him/her to underwrite the risk.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="LeaderFollowerCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains a code that identifies whether Chubb controls the risk or has the largest premium share in a coinsurance agreement.
+Valid values for this element are 'L'- Coinsurance Lead or 'F'- Coinsurance Follower.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ForeignSlipWrittenPercent" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element represents the relationship between Chubb's limit of liability to an account and the entire limit of the risk which Chubb and the policy signing and accounting center (PSAC) agree upon prior to signing the "slip".
+
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyDescription" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element describes the policy.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="NumberOfLocations" type="xsd:integer">
+							<xsd:annotation>
+                <xsd:documentation>This element contains the number of locations covered on a policy.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ChubbParticipationPercent" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element is Chubb’s percent of risk exposure when multiple carriers are participating in a particular coverage.
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AdditionalBenefitsName" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element is the name of the extra coverages pertaining to a policy.
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="HazardCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element is a code that  identifies a specific situation that introduces or increases the probability of an occurrence of a loss, arising from a peril or that may influence the extent of a loss.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="WarehouseLimit" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element is the maximum amount the company agrees to pay for a loss at a particular warehouse location.
+
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="LiabilityLimit" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element is the maximum amount the company agrees to pay in case of injury or damage claims from other parties.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="RenewalDeductibleCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element identifiies whether the change in premium on a renewal is due to a deductible increase or decrease.
+Valid values for this element are 'I'-Increase or 'D'-Decrease.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="RateIncreaseDecreaseCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element identifiies whether the change in premium on a renewal is due to a  rate increase or decrease.
+Valid values for this element are 'I'-Increase or 'D'-Decrease.
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="CoverageDescription" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains a free form text description of the nature of coverages insured.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AlternativeRiskTransferPolicyCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element identifies a policy as an Alternative Risk Transfer Policy and the type of the risk transfer.
+
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="HighestPerPersonLimit" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element is the largest per person limit on a policy where there are multiple per persons limits.
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="AnnualLimit" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element contains the maximum payable for losses during the policy term.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ProducerPolicyReferenceCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains the internal code in the producer's system for the producer to identify the policy.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="MortgageIndicator" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element indicates if there is a creditor who has lent money on this risk.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="LeadCompanyCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains a code for identifying the lead company on the reinsurance policy.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="WIPPolicyTypeSegmentKey" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains the policy type code (key) of the WIP segement.
+The Corporate table E1T00221 contain the valid values for this element if the "WIP_POL_TY_SEG_K " column.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="MasterProgramBusinessIndicator" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element indicates if this Policy is the Master Policy for program business, which typically means it contains all of the coverages that may be sold in accordance with the program rules. This indicator will be used to allow the Policy to flow downstream even if it is not a premium bearing transaction.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CancellationInformation">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="CancellationDate" type="xsd:date">
+							<xsd:annotation>
+								<xsd:documentation>
+This element is the date the policy or bond ceases to provide protection for the coverage or policy.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="CancellationReasonCode" type="xsd:string">
+							<xsd:annotation>
+								
+							<xsd:documentation>This element is a code which identifies why a policy was cancelled.
+The E1T00281 Corporate table contains the valid values for this element in the "CANC_RSN_C" column.
+
+							</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="CancellationReasonName" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies the why a policy was cancelled. 
+The Corporate table E1T00281 contains the valid values for this element in the "CANC_RSN_NA" column.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="CancellationTypeCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element specifies the code for the type of cancellation.
+Valid options for this element are 1-Flat,  2-Prorata, 3-Short Rate. 
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="CancellationLostBusinessRemarks" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element provides additional information on the reason for the cancellation.  
+It is required only when CancellationReasonCode=24 OR CancellationReasonName="Other"
+						</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyIndexCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element contains the code used to designate what index a specific policy falls into for monitoring of pricing adequacy.
+Valid options for this element are 'A', 'B', 'C', 'D' OR '  '.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="OfferingInformation">
+				<xsd:annotation>
+					<xsd:documentation>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="OfferingNumber" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element is a unique identifier for each policy or submission in the Client / WIP system.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="OfferingCategoryCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies the category of an Offering.    
+Valid options for this element are  'POLC' - Policy Offering or 'SURY'- Surety Account in the Client/WIP System.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="OfferingDB2Timestamp" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element is a unique identifier for each policy term in the Client/WIP System.
+Values for this element are in a DB2 timestamp format: yyyy-mm-dd-hh.mm.ss.zzzzzz. 
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="OfferingStatusName" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element describes the current status on an Offering. 
+The E1T00831 Corporate Table contains valid values for this element in the "OFFRG_STAT_NA" column.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="OfferingStatusCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies via a code the current status on an Offering.
+The E1T00831 Corporate Table contains valid values for this element in the "OFFRG_STAT_C" column.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PolicyPremium">
+				<xsd:complexType>
+					<xsd:sequence>
+
+						<xsd:element minOccurs="0" name="ExpiringPremiumAmount" type="xsd:decimal">
+							<xsd:annotation>
+								<xsd:documentation>
+								
+This element is the booked premium of an expiring policy term for all transactions on the policy term.
+This would be the newline(or renewal) premium plus any subsequent endorsement premiums.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="RenewalRateModifierPremiumAmount" type="xsd:decimal">
+							<xsd:annotation>
+								<xsd:documentation>
+This element is the amount of premium on a renewal term that is due to a change in rate.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="EstimatedAnnualPremiumAmount" type="xsd:decimal">
+							<xsd:annotation>
+								<xsd:documentation>
+This element is the total premium expected to be booked on a policy on an annualized basis.
+							</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="LostBusinessPremiumAmount" type="xsd:decimal">
+							<xsd:annotation>
+								
+							<xsd:documentation>This is the Annual Lost Premium Amount as it applies to a Cancellation or a Do Not Renew transaction.  Zero Premium is allowed.
+							</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyPremiumAmount" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element represents the premium charged the policyholder or another insurance company for all the coverages on the policy. </xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PremiumCurrencyCode" type="xsd:string">
+							<xsd:annotation>
+                
+              <xsd:documentation>This element contains a code which identifies the currency of the premium amount.
+The E1T01030 Corporate table contains the valid values for this element in the "ISO_CURNCY_C" column.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="RateModFactor" type="xsd:decimal">
+							<xsd:annotation>
+                <xsd:documentation>This element is a percent that reflects the combined effect on the premium of all appicable modifications of the basic insurance rate. When the RateModFactor = 100, it indicates that no modification is applied. This element is also known as the Rate Modification Factor.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProductInformation">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="InsurerProductCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies a product that the Chubb offers to its Insureds/Customers.
+Values for this element are available in the Product Catalog.
+</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyPrimaryRiskCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element is the code for the major risk of the policy.  This is also known as MajorClassCode.
+The Corporate table E1T00191 contains the valid values for this element in the "MAJ_CLS_C" column.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="MarketingProgramCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies policies written as part of a specific marketing program. 
+The Corporate table E1T00091 contains valid values for this element in the "MRKTG_PGM_C" column.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="CCMCategoryCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies the major risk of a Chubb Custom Market  Policy.
+The Corporate table E1T00081 contains the valid values for this element in the "CCM_CAT_C" column.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ChubbClassCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element indentifies the Customer Group undewritten by the Commercial Undewriting Deparment for a specific line of business.
+The Corporate table E1T00211 contains the valid values for this element in the "UCC_C" column.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PropertyOnlyIndicator" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element indicates if the policy is restricted to Property coverage.
+This elements valid options are 'Y' or 'N'.
+</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PackageIndicator" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element indicates if a record is reported statutorily as a single line of business(monoline), but for internal reporting purposes is treated as Commercial multi-peril (multiline of business).
+This elements valid options are 'Y' or 'N'.
+</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ClaimMadePolicyCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies via a code the commercial liability coverage trigger combinations on a policy.
+This elements valid options are occurrence coverages ('B'), only claim-made coverages ('A') or a combination of both ('C').
+ </xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyTypeCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies the type of the insurance contract with a code.
+The Corporate table E1T00221 contain the valid values for this element in the "POL_TY_C" column.
+</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyTypeEnglishAbbreviation" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element is the name assigned to a policy that represents the type of insurance contract. 
+The Corporate table E1T00221 contain the valid values for this element if the "POL_TY_AB" column.
+</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyTypeSubCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+The element is used to divide Policy Type Code in order to provide more categories for some insurance contracts.  (This is also known as PolicySubTypeCode.)
+The Corporate table E1T00221 contain the valid values for this element if the "POL_SUB_TY_C" column.
+</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ProductComponentName" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains the name of the Product Component.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="DisplayProductTypeName" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>This element contains the name of the Product Type that should be shown to the user.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ReferringInformation">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="ReferringBranch" type="bons14:Branch">
+							<xsd:annotation>
+								<xsd:documentation/>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ReferringDepartment" type="bons15:Department">
+							<xsd:annotation>
+								<xsd:documentation/>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ReferringProducer" type="bons7:Producer">
+							<xsd:annotation>
+								<xsd:documentation/>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ReferringBranchAccountTypeCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies the type of account that has been referred for processing by a Chubb producing branch in a different country in order to comply with the regulatory requirements.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="ReferringForeignAffiliateCode" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>
+This element identifies via a code the insurance company that placed the coverage for a Chubb Insured in an overseas location where Chubb is not licensed to do business.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ControlNumber" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+This element is a unique identifier for each policy or submission.
+				</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PolicyNumber" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+This element identifies an insurance contract.
+				</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PolicySICCode" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+This element identifies a major industry classification as determined by the US Federal Government. 
+The first two characters of the SIC code are the Major Group.
+The last two characters of the SIC code are the Industry Code.  
+The E1T00331 Corporate Table contains valid values for the SIC Code(SIC_C), as well as columns for Major Group (SIC_MAJ_GRP_C) and Industry Code (SIC_INDST_C). 
+The E1T00321 Corporate Table contains valid values for only the Major Group (SIC_MAJ_GRP).
+This element specifies the SIC code at a policy level.
+				</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="InceptionDate" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation>
+This element specifies the inception date of a policy term. 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ExpirationDate" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation>
+This element specifies the expiration date of a policy term. 
+				</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OriginalInceptionDate" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation>
+This element specifies the inception date of a policy term prior to a rewrite transaction.
+This element is required to book a rewrite transaction.
+				</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OriginalExpirationDate" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation>
+This element specifies the expiration date of a policy term prior to a rewrite transaction.
+This element is required to book a rewrite transaction.
+				</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DoNotRenewInformation">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="DoNotRenewDate" type="xsd:date">
+							<xsd:annotation>
+                <xsd:documentation>This element identifies the date that a policy term was not renewed.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="DoNotRenewReasonCode" type="xsd:string">
+							<xsd:annotation>
+                
+              <xsd:documentation>This element is a code which identifies why a policy was not renewed.
+The E1T00281 Corporate table contains the valid values for this element in the "CANC_RSN_C" column.
+</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="DoNotRenewLostBusinessRemarks" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element provides additional information on the reason for the DoNotRenew.  
+ </xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+						<xsd:element minOccurs="0" name="PolicyIndexCode" type="xsd:string">
+							<xsd:annotation>
+                <xsd:documentation>This element contains the code used to designate what index a specific policy falls into for monitoring of pricing adequacy.
+Valid options for this element are 'A', 'B', 'C', 'D' OR '  '.</xsd:documentation>
+              </xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UnderlyerBranch" type="bons14:Branch">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PolicyTermInMonths" type="xsd:integer">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the term in months for the Policy.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+
+
+			<xsd:element minOccurs="0" name="ProductionOfficeInformation" type="bons2:ProductionOfficeInformation">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Coinsurance" type="bons16:Coinsurance">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PreviousPolicyNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the policy number that was used to identify this policy in a previous term.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="InsuranceAdminRole" type="bons17:InsuranceAdminRole">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Underwriter" type="bons5:Underwriter">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UnderwriterAssistant" type="bons0:UnderwriterAssistant">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountServiceRepresentative" type="bons1:AccountServiceRepresentative">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CustomerServiceRepresentative" type="bons3:CustomerServiceRepresentative">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="PolicyTerm" type="PolicyTerm"/>
+</xsd:schema>

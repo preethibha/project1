@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CommercialAccountFileUtil">
+        <wb-resource deploy-path="/" source-path="/src/test/java"/>
+        <wb-resource deploy-path="/" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/test/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/.apt_generated"/>
+        <dependent-module archiveName="commons-codec-1.9.jar" deploy-path="/" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryworkspace/DigitalBusinessLibrary/vendor/commons/commons-codec-1.9.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang.jar" deploy-path="/" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryworkspace/DigitalBusinessLibrary/vendor/commons/commons-lang.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils.jar" deploy-path="/" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryworkspace/DigitalBusinessLibrary/vendor/commons/commons-beanutils.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.jar" deploy-path="/" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryworkspace/DigitalBusinessLibrary/vendor/commons/commons-collections-3.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-digester.jar" deploy-path="/" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryworkspace/DigitalBusinessLibrary/vendor/commons/commons-digester.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

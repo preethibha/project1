@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="GetAccessUserProfilePersistence" default="default" basedir=".">
+
+	<description>
+		This is the Get Access User Profile Persistence sub-project
+    </description>
+
+	<import file="${basedir}/../DigitalBusinessCommon/build-common.xml" id="super.common" />
+
+	<property name="dist.jar" value="GetAccessUserProfilePersistence.jar" />
+
+	<!-- Define other project dependencies for this project -->
+
+	<!-- GA Util project -->
+	<property name="dependency.ga.util.jar" value="GetAccessUserProfileUtil.jar" />
+	<property name="dependency.ga.util.dir" value="${basedir}/../GetAccessUserProfileUtil" />
+	
+	<!-- GA Model project -->
+	<property name="dependency.ga.model.jar" value="GetAccessUserProfileModel.jar" />
+	<property name="dependency.ga.model.dir" value="${basedir}/../GetAccessUserProfileModel" />		
+
+	<!-- Common project -->
+	<property name="dependency.common.jar" value="DigitalBusinessCommon.jar" />
+	<property name="dependency.common.dir" value="${basedir}/../DigitalBusinessCommon" />	
+	
+	<target name="init">
+
+		<!--  Specify the dependency projects to build -->
+		<ant antfile="${dependency.ga.util.dir}/build.xml" target="build" inheritall="false" />
+		<ant antfile="${dependency.ga.model.dir}/build.xml" target="build" inheritall="false" />	
+		<ant antfile="${dependency.common.dir}/build.xml" target="build" inheritall="false" />
+
+		<!--  Specify the Libraries to be used only for compiling this project -->
+		<path id="application-dependency.path">
+
+			<!-- Project dependencies -->
+			<pathelement path="${dependency.ga.util.dir}/target/${dependency.ga.util.jar}" />
+			<pathelement path="${dependency.common.dir}/target/${dependency.common.jar}" />	
+			<pathelement path="${dependency.ga.model.dir}/target/${dependency.ga.model.jar}" />		
+
+		</path>
+
+	</target>
+
+</project>

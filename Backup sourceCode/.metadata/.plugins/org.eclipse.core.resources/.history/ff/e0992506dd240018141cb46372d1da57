@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="CommercialAccountFile" default="build" basedir=".">
+
+	<description>
+		This is the Commercial Account File (web-app) project
+	</description>
+
+	<import file="${basedir}/../DigitalBusinessCommon/build-common.xml" id="super.common" />
+	<import file="${basedir}/../CommercialAccountFileApp/definitions.xml" id="definitions" />
+
+	<property name="dist.jar" value="CommercialAccountFile.jar" />
+	<property name="dist.war" value="${target.dir}/CommercialAccountFile.war" />
+	<property name="war.src" value="${basedir}/WebContent" />
+
+	<target name="init">
+
+		<!--  Specify the Projects to be included in the WAR if specified in .properties -->
+		<path id="war-projects-dependency.path">
+			
+			<!-- Project dependencies -->
+			<pathelement path="${dependency.caf.util.dir}/target/${dependency.caf.util.jar}" />
+			<pathelement path="${dependency.caf.model.dir}/target/${dependency.caf.model.jar}" />
+			<pathelement path="${dependency.caf.domain.dir}/target/${dependency.caf.domain.jar}" />
+			<pathelement path="${dependency.caf.service.client.dir}/target/${dependency.caf.service.client.jar}" />
+		
+		</path>			
+		
+		<!--  Specify the Libraries to be included in the WAR -->
+		<path id="war-dependency.path">
+
+			<!-- Tiles -->
+			<fileset dir="${library.dir}/tiles/2.1.0">
+				<include name="**/*.jar" />
+			</fileset>
+
+			<!-- Json -->
+			<pathelement path="${library.dir}/json/JSON4J.jar" />
+
+			<!-- JSF -->
+			<pathelement path="${library.dir}/jsf/jsf-ibm.jar" />
+
+			<!-- ICU4J -->
+			<pathelement path="${library.dir}/icu4j/icu4j_3_4_1.jar" />
+			
+			<!-- IBM -->
+			<pathelement path="${library.dir}/ibm8_5/jaxrs_1.X/slf4j-jdk14.jar" />
+			<pathelement path="${library.dir}/ibm8_5/jaxrs_1.X/slf4j-api.jar" />
+			<pathelement path="${library.dir}/ibm8_5/jaxrs_1.X/ibm-wink-jaxrs.jar" />
+
+		</path>
+
+		<!--  Specify the Libraries to be used only for compiling this project -->
+		<path id="application-dependency.path">
+
+			<!-- Chubb -->
+			<fileset dir="${library.dir}/chubb8_5">
+				<include name="**/*.jar" />
+			</fileset>
+
+			
+
+			<!-- IBM -->
+			<fileset dir="${library.dir}/ibm8_5/jaxrs_1.X">
+				<include name="**/*.jar" />
+			</fileset>
+
+			<!-- J2EE -->
+			<pathelement path="${library.dir}/ibm8_5/j2ee/j2ee.jar" />
+
+		</path>
+	</target>
+
+	<target name="build" depends="DigitalBusinessCommon.build">
+
+		<create-war />
+	</target>
+
+	<!-- Overwrite this task from build-common to clear any additional project resources -->
+	<target name="deldirs" depends="DigitalBusinessCommon.deldirs" description="Deletes all temporary output directories for the build">
+		<if>
+			<equals arg1="${delete.war.lib}" arg2="true" />
+			<then>
+				<delete>
+				    <fileset dir="${war.src}/WEB-INF/lib" includes="**/*.jar"/>
+				</delete>
+			</then>
+		</if>
+	</target>
+
+	<macrodef name="create-war">
+		<sequential>
+			<pathtofileset name="runtime.fileset" pathrefid="war-dependency.path" dir="${library.dir.path}" />
+			<pathtofileset name="runtime.projects.fileset" pathrefid="war-projects-dependency.path" dir="${basedir}/.." />
+			
+			<copy todir="${war.src}/WEB-INF/lib" flatten="true" overwrite="true">
+				<fileset refid="runtime.fileset" />
+			</copy>
+			
+			<if>
+				<equals arg1="${include.projects.war.lib}" arg2="true" />
+				<then>
+					<copy todir="${war.src}/WEB-INF/lib" flatten="true" overwrite="true">
+						<fileset refid="runtime.projects.fileset" />
+						<fileset file="${target.dir}/${dist.jar}" />
+					</copy>
+				</then>
+			</if>				
+
+			<!-- GENERATE THE WAR FILE -->
+			<war destfile="${dist.war}" webxml="${war.src}/WEB-INF/web.xml" basedir="${war.src}" manifest="${war.src}/META-INF/MANIFEST.MF" />
+
+		</sequential>
+	</macrodef>
+
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/core/user_profile" xmlns:bons1="http://ei/core/user_profile_identifier" xmlns="http://ei/corporate/get_user_profile_list_outputs_crp31x1" targetNamespace="http://ei/corporate/get_user_profile_list_outputs_crp31x1">
+	<xsd:import namespace="http://ei/core/user_profile_identifier" schemaLocation="UserProfileIdentifier.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/user_profile" schemaLocation="UserProfile.xsd">
+	</xsd:import>
+	<xsd:complexType name="GetUserProfileListOutputs">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="UserProfileIdentifier" type="bons1:UserProfileIdentifier">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="UserProfile" type="bons0:UserProfile">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetUserProfileListOutputs" type="GetUserProfileListOutputs" /></xsd:schema>

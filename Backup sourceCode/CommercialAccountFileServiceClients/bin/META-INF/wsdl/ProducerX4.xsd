@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/producer/producerx4" xmlns="http://ei/producer/producerx4" xmlns:bons1="http://ei/producer/producer_enrollment_options" xmlns:bons2="http://ei/producer/producer_contact" xmlns:bons3="http://ei/core/commission_rates_by_policy_category" xmlns:bons4="http://ei/producer/producer_group" xmlns:bons5="http://ei/core/addressx3" xmlns:bons6="http://ei/producer/producer_identifierx1">
+	<xsd:import namespace="http://ei/producer/producer_identifierx1" schemaLocation="ProducerIdentifierX1.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/addressx3" schemaLocation="AddressX3.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/producer/producer_group" schemaLocation="ProducerGroup.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/commission_rates_by_policy_category" schemaLocation="CommissionRatesByPolicyCategory.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/producer/producer_contact" schemaLocation="ProducerContact.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/producer/producer_enrollment_options" schemaLocation="ProducerEnrollmentOptions.xsd">
+	</xsd:import>
+
+	<xsd:complexType name="Producer">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="MailingAddress" type="bons5:Address">
+			</xsd:element>
+
+
+
+			<xsd:element minOccurs="0" name="ProducerRoleCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+This element identifies via a code the function an agent or broker plays on a policy.
+This is also known as Producer Office Role Code or Agent Role Code.
+The E1T00801 Corporate Table contains valid values for this element in the "PROD_OFF_ROLE_C" column. 
+					</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerRoleName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+This element is a name for the function an agent or broker plays on a policy.
+This is also knows as Producer Office Role Name.
+The E1T00801 Corporate Table contains valid values for this element in the "PROD_OFF_ROLE_NA" column. 
+					</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerRoleAbbreviation" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+This element is an abbreviation for the function an agent or broker plays on a policy.
+This is also known as Producer Office Role Abbreviation.
+The E1T00801 Corporate Table contains valid values for this element in the "PROD_OFF_ROLE_AB" column. 
+					</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProcessingOfficeNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+This element identifies an office and/or work center that functions as a processing location.
+					</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducingBranchNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element specifies the number of the Chubb office that receives premium credit for a policy.
+The E1T00031 Corporate Table contains valid values for this element in the "BR_LOC_N" column.
+					</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducingBranchCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element specifies the code of the Chubb office that receives premium credit for a policy.
+The E1T00031 Corporate Table contains valid values for this element in the "BR_OFF_C" column.
+					</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducingBranchAbbreviation" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element identifies the branch via an abbreviation that has produced the business.
+					</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PhoneNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a person's phone number.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FaxNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a person's fax number.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ProducerEnrollmentOptions" type="bons1:ProducerEnrollmentOptions">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NonAppointedProducerIndicator" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>This element specifies if a Producer is liscenced to do business with Chubb and Son and their Writing Companies.
+The E1T00801 Corporate Table contains valid values for this element in the "NON_APPOINT_PROD_I" column. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerClassificationCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a code that describes the classification of the producer (retail or wholesale).</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerClassificationName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a name that describes the classification of the producer (retail or wholesale).</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerAppointmentDate" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the date when the producer was appointed to solicit business for Chubb.
+
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerSpecialIdentificationCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a symbol that further identifies a producer which require special PARS data edits. Some valid values include 'T' Transborder, 'S' Special Risks, 'I' Overseas Investors, 'C' CCM, 'A' Assumed Reinsurance, 'R' Corporate Inbound Reinsurance, 'P' Premium Allocation, and 'Y' Cornerstone Agent.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerOrganizationTypeCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a code that identifies the organization of the producer business.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerTypeCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a code that identifies the producer as either an agency or brokerage.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ZoneNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a number used to identify a Chubb defined zone.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CommercialDirectBillIndicator" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element indicates if the business solicited by the producer is billed directly to the insured.
+Valid values for this element are 'Y' or 'N'.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PersonalDirectBillIndicator" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element indicates if the business solicited by the producer is billed directly to the insured.
+Valid values for this element are 'Y' or 'N'.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PersonalProcessingOfficeNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element is an office and/or work center within Chubb &amp; Son that functions as a processing location for the personal business generated by this Producer.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CommercialProcessingOfficeNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element is an office and/or work center within Chubb &amp; Son that functions as a processing location for the commercial lines of business generated by this Producer.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BusinessAddress" type="bons5:Address">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ProducerContact" type="bons2:ProducerContact">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="CommissionRatesByPolicyCategory" type="bons3:CommissionRatesByPolicyCategory">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ProducerGroup" type="bons4:ProducerGroup">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CombineProducerGroupCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a unique code for a producer group which is inherited by all of the producers who are members.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CommercialStatusCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a code that identifies the status of the Producer for Commercial business.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PersonalStatusCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a code that identifies the status of the Producer for Personal business.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CountersigningStatusCode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a code that identifies the status of the countersigning Producer.
+Valid values for this element are: 'A' - Active, 'C' - Cancelled, and 'N' - Not Open for Business</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CommercialCancellationDate" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the date the producer is cancelled at Chubb from writing Commercial business.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PersonalCancellationDate" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the date the producer is cancelled at Chubb from writing Personal business.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CountersigningCancellationDate" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>This element contains the date the producer is cancelled as a countersigning producer.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MainProducerIndicator" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element indicates if a Producer is authorized to write Business with Chubb and excludes Sub-Agents, Secondary Locations, and Miscellaneous Codes.
+Valid options for this element are 'Y' or 'N'.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MasterProducerNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element contains a number used to group several producer codes, which were assigned for premium and loss tracking for one producer who requires only one account current and submits one payment under the master number.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SubMasterProducerNumber" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This element identifies a subdivision within a producer business.  This can also be used by Chubb to designate categories of business for particular producers; it is used for payment under a master producer number.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerIdentifier" type="bons6:ProducerIdentifier">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="Producer" type="Producer"/>
+</xsd:schema>

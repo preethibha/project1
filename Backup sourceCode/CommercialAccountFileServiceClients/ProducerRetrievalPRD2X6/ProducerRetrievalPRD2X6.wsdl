@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://ei/core/simplefault" xmlns:bons2="http://ei/producer/get_producer_request_prd2x6" xmlns:bons3="http://ei/producer/get_producer_reply_prd2x6" xmlns:bons4="http://ei/producer/get_producer_with_commission_rates_request_prd2x6" xmlns:bons5="http://ei/producer/get_producer_with_commission_rates_reply_prd2x6" xmlns:bons6="http://ei/producer/get_producer_list_request_prd2x6" xmlns:bons7="http://ei/producer/get_producer_list_reply_prd2x6" xmlns:bons8="http://ei/producer/get_filtered_producer_list_request_prd2x6" xmlns:bons9="http://ei/producer/get_filtered_producer_list_reply_prd2x6" xmlns:tns="http://ei/producer/producer_retrieval_prd2x6" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProducerRetrievalPRD2X6" targetNamespace="http://ei/producer/producer_retrieval_prd2x6">
+    <wsdl:types>
+    <xsd:schema xmlns="http://ei/producer/producer_retrieval_prd2x6" targetNamespace="http://ei/producer/producer_retrieval_prd2x6">
+            <xsd:import namespace="http://ei/producer/get_filtered_producer_list_reply_prd2x6" schemaLocation="GetFilteredProducerListReply.xsd" />
+            <xsd:import namespace="http://ei/producer/get_filtered_producer_list_request_prd2x6" schemaLocation="GetFilteredProducerListRequest.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_list_reply_prd2x6" schemaLocation="GetProducerListReply.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_list_request_prd2x6" schemaLocation="GetProducerListRequest.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_with_commission_rates_reply_prd2x6" schemaLocation="GetProducerWithCommissionRatesReply.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_with_commission_rates_request_prd2x6" schemaLocation="GetProducerWithCommissionRatesRequest.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_reply_prd2x6" schemaLocation="GetProducerReply.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_request_prd2x6" schemaLocation="GetProducerRequest.xsd" />
+            <xsd:import namespace="http://ei/core/simplefault" schemaLocation="SimpleFault.xsd" />
+      <xsd:element name="GetProducer2X6">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerRequest" nillable="true" type="bons2:GetProducerRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetProducer2X6Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerReply" nillable="true" type="bons3:GetProducerReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetProducerWithCommissionRates2X6">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerWithCommissionRatesRequest" nillable="true" type="bons4:GetProducerWithCommissionRatesRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetProducerWithCommissionRates2X6Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerWithCommissionRatesReply" nillable="true" type="bons5:GetProducerWithCommissionRatesReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetProducerList2X6">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerListRequest" nillable="true" type="bons6:GetProducerListRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetProducerList2X6Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerListReply" nillable="true" type="bons7:GetProducerListReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFilteredProducerList2X6">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetFilteredProducerListRequest" nillable="true" type="bons8:GetFilteredProducerListRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFilteredProducerList2X6Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetFilteredProducerListReply" nillable="true" type="bons9:GetFilteredProducerListReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SimpleFaultReply" nillable="true" type="bons1:SimpleFault" />
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="GetProducer2X6RequestMsg">
+    <wsdl:part element="tns:GetProducer2X6" name="GetProducer2X6Parameters" />
+  </wsdl:message>
+    <wsdl:message name="GetProducer2X6ResponseMsg">
+    <wsdl:part element="tns:GetProducer2X6Response" name="GetProducer2X6Result" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerWithCommissionRates2X6RequestMsg">
+    <wsdl:part element="tns:GetProducerWithCommissionRates2X6" name="GetProducerWithCommissionRates2X6Parameters" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerWithCommissionRates2X6ResponseMsg">
+    <wsdl:part element="tns:GetProducerWithCommissionRates2X6Response" name="GetProducerWithCommissionRates2X6Result" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerList2X6RequestMsg">
+    <wsdl:part element="tns:GetProducerList2X6" name="GetProducerList2X6Parameters" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerList2X6ResponseMsg">
+    <wsdl:part element="tns:GetProducerList2X6Response" name="GetProducerList2X6Result" />
+  </wsdl:message>
+    <wsdl:message name="GetFilteredProducerList2X6RequestMsg">
+    <wsdl:part element="tns:GetFilteredProducerList2X6" name="GetFilteredProducerList2X6Parameters" />
+  </wsdl:message>
+    <wsdl:message name="GetFilteredProducerList2X6ResponseMsg">
+    <wsdl:part element="tns:GetFilteredProducerList2X6Response" name="GetFilteredProducerList2X6Result" />
+  </wsdl:message>
+    <wsdl:message name="GetProducer2X6_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerWithCommissionRates2X6_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerList2X6_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetFilteredProducerList2X6_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:portType name="ProducerRetrievalPRD2X6">
+    <wsdl:operation name="GetProducer2X6">
+      <wsdl:input message="tns:GetProducer2X6RequestMsg" name="GetProducer2X6Request" />
+      <wsdl:output message="tns:GetProducer2X6ResponseMsg" name="GetProducer2X6Response" />
+      <wsdl:fault message="tns:GetProducer2X6_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducerWithCommissionRates2X6">
+      <wsdl:input message="tns:GetProducerWithCommissionRates2X6RequestMsg" name="GetProducerWithCommissionRates2X6Request" />
+      <wsdl:output message="tns:GetProducerWithCommissionRates2X6ResponseMsg" name="GetProducerWithCommissionRates2X6Response" />
+      <wsdl:fault message="tns:GetProducerWithCommissionRates2X6_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducerList2X6">
+      <wsdl:input message="tns:GetProducerList2X6RequestMsg" name="GetProducerList2X6Request" />
+      <wsdl:output message="tns:GetProducerList2X6ResponseMsg" name="GetProducerList2X6Response" />
+      <wsdl:fault message="tns:GetProducerList2X6_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredProducerList2X6">
+      <wsdl:input message="tns:GetFilteredProducerList2X6RequestMsg" name="GetFilteredProducerList2X6Request" />
+      <wsdl:output message="tns:GetFilteredProducerList2X6ResponseMsg" name="GetFilteredProducerList2X6Response" />
+      <wsdl:fault message="tns:GetFilteredProducerList2X6_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

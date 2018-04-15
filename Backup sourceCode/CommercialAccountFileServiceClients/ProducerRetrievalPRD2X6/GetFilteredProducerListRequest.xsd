@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/producer/get_filtered_producer_list_inputs_prd2x6" xmlns:bons1="http://ei/producer/producer_group_filter" xmlns="http://ei/producer/get_filtered_producer_list_request_prd2x6" targetNamespace="http://ei/producer/get_filtered_producer_list_request_prd2x6">
+
+	<xsd:import schemaLocation="ProducerGroupFilter.xsd" namespace="http://ei/producer/producer_group_filter">
+	</xsd:import>
+	<xsd:import schemaLocation="GetFilteredProducerListInputs.xsd" namespace="http://ei/producer/get_filtered_producer_list_inputs_prd2x6">
+	</xsd:import>
+
+
+	<xsd:complexType name="GetFilteredProducerListRequest">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="0" name="GetFilteredProducerListInputs" type="bons0:GetFilteredProducerListInputs">
+			</xsd:element>
+
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="LineOfBusinessName" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the name of the line of business.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="WritingCompanyCode" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element specifies the code for an indivdual company that issues policies within The Chubb Insurance Group (also known as InsurerNumber). 
+The E1T00011 Corporate Table contains valid values for this element in the "WTE_CO_C" column. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ProducingBranchNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element specifies the number of the Chubb office that receives premium credit for a policy.
+The E1T00031 Corporate Table contains valid values for this element in the "BR_LOC_N" column.
+					</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TransactionEffectiveDate" type="xsd:date">
+				<xsd:annotation>
+          <xsd:documentation>This element is the date when changes made to information on a policy transaction are to take effect.  This element is also known 
+as the Attaching Date and the ChangeEffectiveDate.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="LineOfBusinessTypeCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element indicates if this transaction is on behalf of a Commercial or Personal Policy.
+Valid values are: "C" or "P".</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is used to sign on to an application.  
+This is also known as RACFId.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SystemId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies internal/external sources of information.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="AdditionalOptionsText" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element specifies which options the consumer wants executed on this service.   
+For example, this coud be used for enrichment.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ExternalUserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the user id assigned to a user who needs to access systems from outside Chubb's network. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ExternalVendorUserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains an external vendor user id that is assigned by a vendor, but is known to Chubb and will be used to translate to the appropriate Chubb id so it can be used to call internal systems.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ServiceConsumerSystemId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation> This element identifies internal/external sources of information, from the system that directly invokes an ICC service.
+This is also known as the System Source Code. 
+The Corporate table E1T00871 contains the valid values for this element in the "SYS_SRC_C"  column. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerGroupFilter" type="bons1:ProducerGroupFilter" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetFilteredProducerListRequest" type="GetFilteredProducerListRequest" /></xsd:schema>

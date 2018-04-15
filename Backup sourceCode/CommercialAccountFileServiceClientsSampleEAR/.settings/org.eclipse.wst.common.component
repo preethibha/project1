@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CommercialAccountFileServiceClientsSampleEAR">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="CommercialAccountFileServiceClientsSample.war" deploy-path="/" handle="module:/resource/CommercialAccountFileServiceClientsSample/CommercialAccountFileServiceClientsSample">
+            <dependent-object>Module_1520001422322</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommercialAccountFileServiceClients.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CommercialAccountFileServiceClients/CommercialAccountFileServiceClients">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

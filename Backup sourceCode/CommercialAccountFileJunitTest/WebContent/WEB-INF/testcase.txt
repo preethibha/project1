@@ -1,0 +1,12 @@
+com.chubb.dgmk.caf.domain.manager.test.AccountFileDomainManagerTest
+com.chubb.dgmk.caf.domain.manager.test.BookOfBusinessDomainManagerTest
+com.chubb.dgmk.caf.domain.manager.test.ContactChubbDomainManagerTest
+com.chubb.dgmk.caf.util.test.CAFPropertiesFileDigesterUtilTest
+com.chubb.dgmk.caf.util.test.BoBPropertiesFileDigesterUtilTest
+com.chubb.dgmk.caf.wsc.accessors.test.BranchRetrievalAccessorTest
+com.chubb.dgmk.caf.wsc.accessors.test.ChubbContactRetrievalAccessorTest
+com.chubb.dgmk.caf.wsc.accessors.test.CommercialAccountRetrievalAccessorTest
+com.chubb.dgmk.caf.wsc.accessors.test.CommercialPolicyRetrievalAccessorTest
+com.chubb.dgmk.caf.wsc.accessors.test.ProducerRetrievalAccessorTest
+com.chubb.dgmk.caf.wsc.accessors.test.ProductRetrievalAccessorTest
+

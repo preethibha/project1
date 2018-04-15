@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://ei/producer/producer_retrieval_prd2x5" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://ei/producer/producer_retrieval_prd2x5_http" name="ProducerRetrievalPRD2X5Http" targetNamespace="http://ei/producer/producer_retrieval_prd2x5_http">
+  <wsdl:import location="ProducerRetrievalPRD2X5.wsdl" namespace="http://ei/producer/producer_retrieval_prd2x5" />
+  <wsdl:binding name="ProducerRetrievalPRD2X5HttpBinding" type="Port_0:ProducerRetrievalPRD2X5">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProducer2X5">
+      <soap:operation soapAction="GetProducer2X5" />
+      <wsdl:input name="GetProducer2X5Request">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetProducer2X5Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SimpleFaultReply">
+        <soap:fault name="SimpleFaultReply" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducerWithCommissionRates2X5">
+      <soap:operation soapAction="GetProducerWithCommissionRates2X5" />
+      <wsdl:input name="GetProducerWithCommissionRates2X5Request">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetProducerWithCommissionRates2X5Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SimpleFaultReply">
+        <soap:fault name="SimpleFaultReply" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducerList2X5">
+      <soap:operation soapAction="GetProducerList2X5" />
+      <wsdl:input name="GetProducerList2X5Request">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetProducerList2X5Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SimpleFaultReply">
+        <soap:fault name="SimpleFaultReply" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredProducerList2X5">
+      <soap:operation soapAction="GetFilteredProducerList2X5" />
+      <wsdl:input name="GetFilteredProducerList2X5Request">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetFilteredProducerList2X5Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SimpleFaultReply">
+        <soap:fault name="SimpleFaultReply" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProducerRetrievalPRD2X5HttpService">
+    <wsdl:port binding="this:ProducerRetrievalPRD2X5HttpBinding" name="ProducerRetrievalPRD2X5HTTP_ProducerRetrievalPRD2X5HttpPort">
+      <soap:address location="Contact ICC for ProducerRetrievalPRD2X5 Endpoint" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

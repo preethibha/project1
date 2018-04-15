@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://ei/producer/extended_producerx3" xmlns="http://ei/producer/get_producer_list_outputs_prd2x5" targetNamespace="http://ei/producer/get_producer_list_outputs_prd2x5">
+	<xsd:import schemaLocation="ExtendedProducerX3.xsd" namespace="http://ei/producer/extended_producerx3">
+	</xsd:import>
+	<xsd:complexType name="GetProducerListOutputs">
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="ExtendedProducer" type="bons1:ExtendedProducer">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetProducerListOutputs" type="GetProducerListOutputs" /></xsd:schema>

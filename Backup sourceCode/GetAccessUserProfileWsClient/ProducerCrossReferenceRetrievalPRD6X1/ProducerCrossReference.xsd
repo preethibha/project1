@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://ei/core/addressx5" xmlns:bons2="http://ei/core/branchx1" xmlns="http://ei/producer/producer_cross_reference" targetNamespace="http://ei/producer/producer_cross_reference">
+	<xsd:import namespace="http://ei/core/addressx5" schemaLocation="AddressX5.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/branchx1" schemaLocation="BranchX1.xsd">
+	</xsd:import>
+
+	<xsd:complexType name="ProducerCrossReference">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ProducingBranch" type="bons2:Branch">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="PhysicalLocationAddress" type="bons1:Address">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TaxPayerIdNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is an identification number assigned by the U.S. government to identify a legal entity that has employees.  This is also known as EIN.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="ChubbProducerNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element is a Chubb ID number for an agent or broker
+This is also known as the Agent Number.
+The AGTAGDA1 Corporate Table contains valid values for this element in the "AGT_N" column.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ChubbProducerSubNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element identifies a subdivision of business within an agent or broker.
+This also known as Sub Agent Number or Sub Producer Number.
+The AGTAGDA1 Corporate Table contains valid values for this element in the "SUB_AGT_N" column.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="ChubbProducerAppointmentStatusCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a code used to identify the status of the producer appointment.
+Valid options for the element are 'C'-Cancelled and 'A'-Active.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ChubbCombineProducerGroupCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a unique code for a producer group which is inherited by all of the producers who are members.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+
+
+
+
+
+			<xsd:element minOccurs="0" name="ChubbProducerSpecialIdentificationCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a symbol that further identifies a producer which require special PARS data edits. Some valid values include 'T' Transborder, 'S' Special Risks, 'I' Overseas Investors, 'C' CCM, 'A' Assumed Reinsurance, 'R' Corporate Inbound Reinsurance, 'P' Premium Allocation, and 'Y' Cornerstone Agent.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PASSourceProducerCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the code assigned to the producer in the ACE PAS system.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PASMasterProducerCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the Master Producer Group for a Producer.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PASNationalProducerCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the National Producer Group for a Producer.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PASProducerStatusDescription" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a code used to identify the status of the producer.
+Valid options for the element are Open, Closed, Closed to New Business, and Transferred.
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PASNormalMarketingAdminCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PASProducerCategoryCode" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element contains a contains category assigned to a Producer that indentifies that type of business for the Producer.  Some examples include: General Category, ACE Private Risk Services (PRS),  or NEWMARKET.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FormerProducerName" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element contains the name under which the producer was previously contracted.  </xsd:documentation></xsd:annotation>
+			</xsd:element>
+
+
+
+
+			<xsd:element minOccurs="0" name="ProducerPrimaryContractName" type="xsd:string">
+				<xsd:annotation><xsd:documentation>This element contains the name that relates to the Producer name in Chubb’s Producer system and is the name that filters down to various policy systems would appear on the Declarations page.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerContractedName" type="xsd:string">
+				<xsd:annotation><xsd:documentation> This element contains the name that is shown on the producer’s resident state license.  </xsd:documentation></xsd:annotation>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="PASCategoryGroupCode" type="xsd:string"><xsd:annotation><xsd:documentation>&lt;br /&gt;
+&lt;p&gt;
+    This element contains the category group for the Producer&amp;nbsp;in the ACE PAS system. Valid values include: '&lt;span
+    style='FONT-SIZE: 12pt; FONT-FAMILY: "Times New Roman","serif"; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA'&gt;
+    PRS', 'A&amp;amp;H',&amp;nbsp; and 'COM'.&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    &amp;nbsp;
+&lt;/p&gt;
+&lt;p&gt;
+    &amp;nbsp;
+&lt;/p&gt;</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PMSSourceProducerCode" type="xsd:string"><xsd:annotation><xsd:documentation>This element contains the code assigned to the producer in the ACE PMS system.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="ProducerCrossReference" type="ProducerCrossReference" /></xsd:schema>

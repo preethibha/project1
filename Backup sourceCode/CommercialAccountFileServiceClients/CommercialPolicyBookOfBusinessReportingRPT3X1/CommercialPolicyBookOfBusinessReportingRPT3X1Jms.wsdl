@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://ei/reporting/commercial_policy_book_of_business_reporting_rpt3x1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://ei/reporting/commercial_policy_book_of_business_reporting_rpt3x1_jms" name="CommercialPolicyBookOfBusinessReportingRPT3X1Jms" targetNamespace="http://ei/reporting/commercial_policy_book_of_business_reporting_rpt3x1_jms">
+  <wsdl:import location="CommercialPolicyBookOfBusinessReportingRPT3X1.wsdl" namespace="http://ei/reporting/commercial_policy_book_of_business_reporting_rpt3x1" />
+  <wsdl:binding name="CommercialPolicyBookOfBusinessReportingRPT3X1JmsBinding" type="Port_0:CommercialPolicyBookOfBusinessReportingRPT3X1">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/jms" />
+    <wsdl:operation name="GenerateBookOfBusinessReport">
+      <soap:operation />
+      <wsdl:input name="GenerateBookOfBusinessReportRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GenerateBookOfBusinessReportResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SimpleFaultReply">
+        <soap:fault name="SimpleFaultReply" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommercialPolicyBookOfBusinessReportingRPT3X1JmsService">
+    <wsdl:port binding="this:CommercialPolicyBookOfBusinessReportingRPT3X1JmsBinding" name="CommercialPolicyBookOfBusinessReportingRPT3X1JMS_CommercialPolicyBookOfBusinessReportingRPT3X1JmsPort">
+      <soap:address location="jms:/queue?destination=jms/CommercialPolicyBookOfBusinessReportingRPT3X1Export1&amp;connectionFactory=jms/CommercialPolicyBookOfBusinessReportingRPT3X1Export1QCF&amp;targetService=CommercialPolicyBookOfBusinessReportingRPT3X1Export1_CommercialPolicyBookOfBusinessReportingRPT3X1JmsPort" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

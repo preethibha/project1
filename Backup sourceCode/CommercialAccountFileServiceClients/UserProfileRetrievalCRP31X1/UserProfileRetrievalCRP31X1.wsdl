@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons0="http://ei/corporate/user_profile_retrieval_crp33x1" xmlns:bons3="http://ei/core/simplefault" xmlns:tns="http://ei/corporate/user_profile_retrieval_crp31x1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserProfileRetrievalCRP33X1" targetNamespace="http://ei/corporate/user_profile_retrieval_crp31x1">
+    <wsdl:types>
+    <xsd:schema xmlns:bons0="http://ei/corporate/user_profile_retrieval_crp31x1" xmlns:bons2="http://ei/corporate/get_user_profile_request_crp31x1" xmlns:bons4="http://ei/corporate/get_user_profile_reply_crp31x1" xmlns:bons5="http://ei/corporate/get_user_profile_list_request_crp31x1" xmlns:bons6="http://ei/corporate/get_user_profile_list_reply_crp31x1" xmlns:bons7="http://ei/corporate/get_user_profile_list_by_email_request_crp31x1" xmlns:bons8="http://ei/corporate/get_user_profile_list_by_email_reply_crp31x1" xmlns="http://ei/corporate/user_profile_retrieval_crp31x1" targetNamespace="http://ei/corporate/user_profile_retrieval_crp31x1">
+            <xsd:import namespace="http://ei/corporate/get_user_profile_request_crp31x1" schemaLocation="GetUserProfileRequest.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_user_profile_reply_crp31x1" schemaLocation="GetUserProfileReply.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_user_profile_list_request_crp31x1" schemaLocation="GetUserProfileListRequest.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_user_profile_list_reply_crp31x1" schemaLocation="GetUserProfileListReply.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_user_profile_list_by_email_request_crp31x1" schemaLocation="GetUserProfileListByEmailRequest.xsd" />
+            <xsd:import namespace="http://ei/corporate/get_user_profile_list_by_email_reply_crp31x1" schemaLocation="GetUserProfileListByEmailReply.xsd" />
+            <xsd:import namespace="http://ei/core/simplefault" schemaLocation="SimpleFault.xsd" />
+            <xsd:element name="GetUserProfile">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetUserProfileRequest" nillable="true" type="bons2:GetUserProfileRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserProfileResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetUserProfileReply" nillable="true" type="bons4:GetUserProfileReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserProfileList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetUserProfileListRequest" nillable="true" type="bons5:GetUserProfileListRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserProfileListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetUserProfileListReply" nillable="true" type="bons6:GetUserProfileListReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserProfileListByEmail">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetUserProfileListByEmailRequest" nillable="true" type="bons7:GetUserProfileListByEmailRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserProfileListByEmailResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetUserProfileListByEmailReply" nillable="true" type="bons8:GetUserProfileListByEmailReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SimpleFaultReply" nillable="true" type="bons3:SimpleFault" />
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="GetUserProfileRequestMsg">
+    <wsdl:part element="tns:GetUserProfile" name="GetUserProfileParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetUserProfileResponseMsg">
+    <wsdl:part element="tns:GetUserProfileResponse" name="GetUserProfileResult" />
+  </wsdl:message>
+    <wsdl:message name="GetUserProfile_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetUserProfileListRequestMsg">
+    <wsdl:part element="tns:GetUserProfileList" name="GetUserProfileListParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetUserProfileListResponseMsg">
+    <wsdl:part element="tns:GetUserProfileListResponse" name="GetUserProfileListResult" />
+  </wsdl:message>
+    <wsdl:message name="GetUserProfileList_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetUserProfileListByEmailRequestMsg">
+    <wsdl:part element="tns:GetUserProfileListByEmail" name="GetUserProfileListByEmailParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetUserProfileListByEmailResponseMsg">
+    <wsdl:part element="tns:GetUserProfileListByEmailResponse" name="GetUserProfileListByEmailResult" />
+  </wsdl:message>
+    <wsdl:message name="GetUserProfileListByEmail_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:portType name="UserProfileRetrievalCRP31X1">
+    <wsdl:operation name="GetUserProfile">
+      <wsdl:input message="tns:GetUserProfileRequestMsg" name="GetUserProfileRequest" />
+      <wsdl:output message="tns:GetUserProfileResponseMsg" name="GetUserProfileResponse" />
+      <wsdl:fault message="tns:GetUserProfile_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileList">
+      <wsdl:input message="tns:GetUserProfileListRequestMsg" name="GetUserProfileListRequest" />
+      <wsdl:output message="tns:GetUserProfileListResponseMsg" name="GetUserProfileListResponse" />
+      <wsdl:fault message="tns:GetUserProfileList_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileListByEmail">
+      <wsdl:input message="tns:GetUserProfileListByEmailRequestMsg" name="GetUserProfileListByEmailRequest" />
+      <wsdl:output message="tns:GetUserProfileListByEmailResponseMsg" name="GetUserProfileListByEmailResponse" />
+      <wsdl:fault message="tns:GetUserProfileListByEmail_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

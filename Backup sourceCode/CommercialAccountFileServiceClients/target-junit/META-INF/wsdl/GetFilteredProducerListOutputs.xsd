@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/producer/get_filtered_producer_list_outputs_prd2x6" xmlns="http://ei/producer/get_filtered_producer_list_outputs_prd2x6" xmlns:bons0="http://ei/core/producer_identifierx4" xmlns:bons1="http://ei/core/status_informationx1" xmlns:bons3="http://ei/producer/extended_producerx4">
+	<xsd:import namespace="http://ei/core/producer_identifierx4" schemaLocation="ProducerIdentifierX4.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/producer/extended_producerx4" schemaLocation="ExtendedProducerX4.xsd">
+	</xsd:import>
+
+	<xsd:import namespace="http://ei/core/status_informationx1" schemaLocation="StatusInformationX1.xsd">
+	</xsd:import>
+
+	<xsd:complexType name="GetFilteredProducerListOutputs">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="RequestedProducerIdentifier" type="bons0:ProducerIdentifier">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ExtendedProducer" type="bons3:ExtendedProducer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StatusInformation" type="bons1:StatusInformation">
+			</xsd:element>
+
+
+			<xsd:element minOccurs="0" name="ProducerFoundIndicator" type="xsd:boolean">
+				<xsd:annotation>
+          <xsd:documentation>This element indicates if the Producer sent in by the consumer was found.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerReplacedIndicator" type="xsd:boolean">
+				<xsd:annotation>
+          <xsd:documentation>This element indicates if the Producer sent in by the consumer has been replaced with the Cancel and Use Producer.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+
+
+			<xsd:element minOccurs="0" name="ProducerSubNumberFlipIndicator" type="xsd:boolean">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element specifies whether the ProducerSubNumber was flipped from zeros to nines in order to complete the request.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProducerAppointmentStatusCode" type="xsd:string">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element contains a code used to identify the status of the producer appointment.
+Valid options for the element are 'C'-Cancelled and 'A'-Active.
+
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetFilteredProducerListOutputs" type="GetFilteredProducerListOutputs"/>
+</xsd:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/crm/commercial_insured_group_with_policy_term" xmlns="http://ei/crm/commercial_insured_group_with_policy_term" xmlns:bons0="http://ei/crm/insured_with_policy_term" xmlns:bons2="http://ei/crm/commercial_insured_group">
+    <xsd:import namespace="http://ei/crm/commercial_insured_group" schemaLocation="CommercialInsuredGroup.xsd"/>
+    <xsd:import namespace="http://ei/crm/insured_with_policy_term" schemaLocation="InsuredWithPolicyTerm.xsd">
+	</xsd:import>
+	<xsd:complexType name="CommercialInsuredGroupWithPolicyTerm">
+		<xsd:complexContent>
+			<xsd:extension base="bons2:CommercialInsuredGroup">
+
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="InsuredWithPolicyTerm" type="bons0:InsuredWithPolicyTerm">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+<xsd:element name="CommercialInsuredGroupWithPolicyTerm" type="CommercialInsuredGroupWithPolicyTerm"/>
+</xsd:schema>

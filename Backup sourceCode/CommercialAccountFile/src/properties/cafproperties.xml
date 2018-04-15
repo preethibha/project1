@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- cafproperties.xml -->
+
+<properties>
+
+	<local> <!-- Environment specific settings for JNDI Chubb/Level of "local" -->
+		<app> <!-- Application Properties -->
+			<applicationName>CommercialAccountFile</applicationName>
+			<subsystem>local</subsystem>
+			<failureNotification>  corgitechsupport@chubb.com</failureNotification>
+			<branchRetrievalEndpoint>http://EIBRRETCRP2X1D/Corporate2ServicesWeb/sca/BranchRetrievalCRP2X1Http</branchRetrievalEndpoint>
+			<productRetrievalEndpoint>http://EIPRDCTRETRVLPDT1X1-ut/ProductServicesWeb/sca/ProductRetrievalPDT1X1Http</productRetrievalEndpoint>
+			<producerRetrievalEndpoint>http://eiprodretprd2x5-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X5Http</producerRetrievalEndpoint>
+			<customerSearchEndpoint>http://EICOMMCUSTSRCHCRM4X4D/CRM2ServicesWeb/sca/CommercialCustomerSearchCRM4X4Http</customerSearchEndpoint>
+			<countryRetrievalEndpoint>http://EICNTRYRETREIVALCRP10X1d/CorporateServicesWeb/sca/CountryRetrievalCRP10X1Http</countryRetrievalEndpoint>
+			<policyRetrievalEndpoint>http://eicomlinsdgrppolrtrvlcrm33x1-ut/CRM6ServicesWeb/sca/CommercialInsuredGroupPolicyRetrievalCRM33X1Http</policyRetrievalEndpoint>
+			<contactRetrievalEndpoint>http://eicntctretvlcrp30x1-ut/Corporate4ServicesWeb/sca/ContactRetrievalCRP30X1Http</contactRetrievalEndpoint>
+			<bookOfBusinessSendEndpoint>jms/requestQ_BookOfBusiness</bookOfBusinessSendEndpoint>
+			<producer2X6RetrievalEndpoint>http://EIPRODRETPRD2X6-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X6Http</producer2X6RetrievalEndpoint>
+			<userProfileRetrievalEndpoint>http://eiuserpfileretcrp31x1-ut:80/Corporate4ServicesWeb/sca/UserProfileRetrievalCRP31X1Http</userProfileRetrievalEndpoint>
+		</app>
+	</local>
+	
+	<dev> <!-- Environment specific settings for JNDI Chubb/Level of "dev" -->
+		<app> <!-- Application Properties -->
+			<applicationName>CommercialAccountFile</applicationName>
+			<subsystem>dev</subsystem>
+			<failureNotification>  corgitechsupport@chubb.com</failureNotification>
+			<branchRetrievalEndpoint>http://EIBRRETCRP2X1D/Corporate2ServicesWeb/sca/BranchRetrievalCRP2X1Http</branchRetrievalEndpoint>
+			<productRetrievalEndpoint>http://EIPRDCTRETRVLPDT1X1-ut/ProductServicesWeb/sca/ProductRetrievalPDT1X1Http</productRetrievalEndpoint>
+			<producerRetrievalEndpoint>http://eiprodretprd2x5-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X5Http</producerRetrievalEndpoint>
+			<customerSearchEndpoint>http://EICOMMCUSTSRCHCRM4X4D/CRM2ServicesWeb/sca/CommercialCustomerSearchCRM4X4Http</customerSearchEndpoint>
+			<countryRetrievalEndpoint>http://EICNTRYRETREIVALCRP10X1d/CorporateServicesWeb/sca/CountryRetrievalCRP10X1Http</countryRetrievalEndpoint>
+			<policyRetrievalEndpoint>http://eicomlinsdgrppolrtrvlcrm33x1-ut/CRM6ServicesWeb/sca/CommercialInsuredGroupPolicyRetrievalCRM33X1Http</policyRetrievalEndpoint>
+			<contactRetrievalEndpoint>http://eicntctretvlcrp30x1-ut/Corporate4ServicesWeb/sca/ContactRetrievalCRP30X1Http</contactRetrievalEndpoint>
+			<bookOfBusinessSendEndpoint>jms/requestQ_BookOfBusiness</bookOfBusinessSendEndpoint>
+			<producer2X6RetrievalEndpoint>http://EIPRODRETPRD2X6-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X6Http</producer2X6RetrievalEndpoint>
+			<userProfileRetrievalEndpoint>http://eiuserpfileretcrp31x1-ut:80/Corporate4ServicesWeb/sca/UserProfileRetrievalCRP31X1Http</userProfileRetrievalEndpoint>
+		</app>
+	</dev>	
+	
+	<ut> <!-- Environment specific settings for JNDI Chubb/Level of "ut" -->
+		<app> <!-- Application Properties -->
+			<applicationName>CommercialAccountFile</applicationName>
+			<subsystem>ut</subsystem>
+			<failureNotification>  corgitechsupport@chubb.com</failureNotification>
+			<branchRetrievalEndpoint>http://EIBRRETCRP2X1D/Corporate2ServicesWeb/sca/BranchRetrievalCRP2X1Http</branchRetrievalEndpoint>
+			<productRetrievalEndpoint>http://EIPRDCTRETRVLPDT1X1-ut/ProductServicesWeb/sca/ProductRetrievalPDT1X1Http</productRetrievalEndpoint>
+			<producerRetrievalEndpoint>http://eiprodretprd2x5-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X5Http</producerRetrievalEndpoint>
+			<customerSearchEndpoint>http://EICOMMCUSTSRCHCRM4X4D/CRM2ServicesWeb/sca/CommercialCustomerSearchCRM4X4Http</customerSearchEndpoint>
+			<countryRetrievalEndpoint>http://EICNTRYRETREIVALCRP10X1d/CorporateServicesWeb/sca/CountryRetrievalCRP10X1Http</countryRetrievalEndpoint>
+			<policyRetrievalEndpoint>http://eicomlinsdgrppolrtrvlcrm33x1-ut/CRM6ServicesWeb/sca/CommercialInsuredGroupPolicyRetrievalCRM33X1Http</policyRetrievalEndpoint>
+			<contactRetrievalEndpoint>http://eicntctretvlcrp30x1-ut/Corporate4ServicesWeb/sca/ContactRetrievalCRP30X1Http</contactRetrievalEndpoint>
+			<bookOfBusinessSendEndpoint>jms/requestQ_BookOfBusiness</bookOfBusinessSendEndpoint>
+			<producer2X6RetrievalEndpoint>http://EIPRODRETPRD2X6-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X6Http</producer2X6RetrievalEndpoint>
+			<userProfileRetrievalEndpoint>http://eiuserpfileretcrp31x1-ut:80/Corporate4ServicesWeb/sca/UserProfileRetrievalCRP31X1Http</userProfileRetrievalEndpoint>
+		</app>				
+	</ut>	
+
+	<it> <!-- Environment specific settings for JNDI Chubb/Level of "it" -->
+		<app> <!-- Application Properties -->
+			<applicationName>CommercialAccountFile</applicationName>
+			<subsystem>it</subsystem>
+			<failureNotification>  corgitechsupport@chubb.com</failureNotification>
+			<branchRetrievalEndpoint>http://EIBRRETCRP2X1T/Corporate2ServicesWeb/sca/BranchRetrievalCRP2X1Http</branchRetrievalEndpoint>
+			<productRetrievalEndpoint>http://EIPRDCTRETRVLPDT1X1-it/ProductServicesWeb/sca/ProductRetrievalPDT1X1Http</productRetrievalEndpoint>
+			<producerRetrievalEndpoint>http://eiprodretprd2x5-it/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X5Http</producerRetrievalEndpoint>
+			<customerSearchEndpoint>http://EICOMMCUSTSRCHCRM4X4T/CRM2ServicesWeb/sca/CommercialCustomerSearchCRM4X4Http</customerSearchEndpoint>
+			<countryRetrievalEndpoint>http://eicntryretreivalcrp10x1t/CorporateServicesWeb/sca/CountryRetrievalCRP10X1Http</countryRetrievalEndpoint>
+			<policyRetrievalEndpoint>http://eicomlinsdgrppolrtrvlcrm33x1-it/CRM6ServicesWeb/sca/CommercialInsuredGroupPolicyRetrievalCRM33X1Http</policyRetrievalEndpoint>
+			<contactRetrievalEndpoint>http://eicntctretvlcrp30x1-it/Corporate4ServicesWeb/sca/ContactRetrievalCRP30X1Http</contactRetrievalEndpoint>
+			<bookOfBusinessSendEndpoint>jms/requestQ_BookOfBusiness</bookOfBusinessSendEndpoint>
+			<producer2X6RetrievalEndpoint>http://EIPRODRETPRD2X6-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X6Http</producer2X6RetrievalEndpoint>
+			<userProfileRetrievalEndpoint>http://eiuserpfileretcrp31x1-ut:80/Corporate4ServicesWeb/sca/UserProfileRetrievalCRP31X1Http</userProfileRetrievalEndpoint>
+		</app>			
+	</it>	
+
+	<st> <!-- Environment specific settings for JNDI Chubb/Level of "st" -->
+		<app> <!-- Application Properties -->
+			<applicationName>CommercialAccountFile</applicationName>
+			<subsystem>st</subsystem>
+			<failureNotification>  corgitechsupport@chubb.com</failureNotification>
+			<branchRetrievalEndpoint>http://EIBRRETCRP2X1S/Corporate2ServicesWeb/sca/BranchRetrievalCRP2X1Http</branchRetrievalEndpoint>
+			<productRetrievalEndpoint>http://EIPRDCTRETRVLPDT1X1-st/ProductServicesWeb/sca/ProductRetrievalPDT1X1Http</productRetrievalEndpoint>
+			<producerRetrievalEndpoint>http://eiprodretprd2x5-st/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X5Http</producerRetrievalEndpoint>
+			<countryRetrievalEndpoint>http://eicntryretreivalcrp10x1s/CorporateServicesWeb/sca/CountryRetrievalCRP10X1Http</countryRetrievalEndpoint>
+			<customerSearchEndpoint>http://EICOMMCUSTSRCHCRM4X4S/CRM2ServicesWeb/sca/CommercialCustomerSearchCRM4X4Http</customerSearchEndpoint>
+			<policyRetrievalEndpoint>http://eicomlinsdgrppolrtrvlcrm33x1-st/CRM6ServicesWeb/sca/CommercialInsuredGroupPolicyRetrievalCRM33X1Http</policyRetrievalEndpoint>
+			<contactRetrievalEndpoint>http://eicntctretvlcrp30x1-st/Corporate4ServicesWeb/sca/ContactRetrievalCRP30X1Http</contactRetrievalEndpoint>
+			<bookOfBusinessSendEndpoint>jms/requestQ_BookOfBusiness</bookOfBusinessSendEndpoint>
+			<producer2X6RetrievalEndpoint>http://EIPRODRETPRD2X6-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X6Http</producer2X6RetrievalEndpoint>
+			<userProfileRetrievalEndpoint>http://eiuserpfileretcrp31x1-ut:80/Corporate4ServicesWeb/sca/UserProfileRetrievalCRP31X1Http</userProfileRetrievalEndpoint>
+		</app>				
+	</st>	
+		
+	<ps> <!-- Environment specific settings for JNDI Chubb/Level of "ps" -->
+		<app> <!-- Application Properties -->
+			<applicationName>CommercialAccountFile</applicationName>
+			<subsystem>ps</subsystem>
+			<failureNotification>  corgitechsupport@chubb.com</failureNotification>
+			<branchRetrievalEndpoint>http://EIBRRETCRP2X1M/Corporate2ServicesWeb/sca/BranchRetrievalCRP2X1Http</branchRetrievalEndpoint>
+			<productRetrievalEndpoint>http://EIPRDCTRETRVLPDT1X1-ps/ProductServicesWeb/sca/ProductRetrievalPDT1X1Http</productRetrievalEndpoint>
+			<producerRetrievalEndpoint>http://eiprodretprd2x5-ps/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X5Http</producerRetrievalEndpoint>
+			<countryRetrievalEndpoint>http://eicntryretreivalcrp10x1m/CorporateServicesWeb/sca/CountryRetrievalCRP10X1Http</countryRetrievalEndpoint>
+			<customerSearchEndpoint>http://EICOMMCUSTSRCHCRM4X4M/CRM2ServicesWeb/sca/CommercialCustomerSearchCRM4X4Http</customerSearchEndpoint>
+			<policyRetrievalEndpoint>http://eicomlinsdgrppolrtrvlcrm33x1-ps/CRM6ServicesWeb/sca/CommercialInsuredGroupPolicyRetrievalCRM33X1Http</policyRetrievalEndpoint>
+			<contactRetrievalEndpoint>http://eicntctretvlcrp30x1-ps/Corporate4ServicesWeb/sca/ContactRetrievalCRP30X1Http</contactRetrievalEndpoint>
+			<bookOfBusinessSendEndpoint>jms/requestQ_BookOfBusiness</bookOfBusinessSendEndpoint>
+			<producer2X6RetrievalEndpoint>http://EIPRODRETPRD2X6-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X6Http</producer2X6RetrievalEndpoint>
+			<userProfileRetrievalEndpoint>http://eiuserpfileretcrp31x1-ut:80/Corporate4ServicesWeb/sca/UserProfileRetrievalCRP31X1Http</userProfileRetrievalEndpoint>
+		</app>			
+	</ps>	
+	
+	<prod> <!-- Environment specific settings for JNDI Chubb/Level of "prod" -->
+		<app> <!-- Application Properties -->
+			<applicationName>CommercialAccountFile</applicationName>
+			<subsystem>prod</subsystem>
+			<failureNotification>  corgitechsupport@chubb.com</failureNotification>
+			<branchRetrievalEndpoint>http://EIBRRETCRP2X1P/Corporate2ServicesWeb/sca/BranchRetrievalCRP2X1Http</branchRetrievalEndpoint>
+			<productRetrievalEndpoint>http://EIPRDCTRETRVLPDT1X1/ProductServicesWeb/sca/ProductRetrievalPDT1X1Http</productRetrievalEndpoint>
+			<producerRetrievalEndpoint>http://eiprodretprd2x5/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X5Http</producerRetrievalEndpoint>
+			<countryRetrievalEndpoint>http://eicntryretreivalcrp10x1p/CorporateServicesWeb/sca/CountryRetrievalCRP10X1Http</countryRetrievalEndpoint>
+			<customerSearchEndpoint>http://EICOMMCUSTSRCHCRM4X4P/CRM2ServicesWeb/sca/CommercialCustomerSearchCRM4X4Http</customerSearchEndpoint>
+			<policyRetrievalEndpoint>http://eicomlinsdgrppolrtrvlcrm33x1/CRM6ServicesWeb/sca/CommercialInsuredGroupPolicyRetrievalCRM33X1Http</policyRetrievalEndpoint>
+			<contactRetrievalEndpoint>http://eicntctretvlcrp30x1/Corporate4ServicesWeb/sca/ContactRetrievalCRP30X1Http</contactRetrievalEndpoint>
+			<bookOfBusinessSendEndpoint>jms/requestQ_BookOfBusiness</bookOfBusinessSendEndpoint>
+			<producer2X6RetrievalEndpoint>http://EIPRODRETPRD2X6-ut/Producer2ServicesWeb/sca/ProducerRetrievalPRD2X6Http</producer2X6RetrievalEndpoint>
+			<userProfileRetrievalEndpoint>http://eiuserpfileretcrp31x1-ut:80/Corporate4ServicesWeb/sca/UserProfileRetrievalCRP31X1Http</userProfileRetrievalEndpoint>
+		</app>			
+	</prod>		
+	
+</properties>

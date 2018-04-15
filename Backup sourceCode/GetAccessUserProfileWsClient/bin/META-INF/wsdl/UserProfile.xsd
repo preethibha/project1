@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons3="http://chubb_corporate/get_access/user" xmlns:bons5="http://chubb_corporate/get_access/region_and_language_settings" xmlns:bons2="http://chubb_corporate/get_access/application_user_profile" xmlns:bons1="http://chubb_corporate/get_access/access_control_group" xmlns:bons0="http://chubb_corporate/get_access/user_authorization" xmlns:bons4="http://chubb_corporate/get_access/customization" xmlns:bons6="http://chubb_corporate/get_access/source_system_user_profile_id" xmlns="http://chubb_corporate/get_access/user_profile" targetNamespace="http://chubb_corporate/get_access/user_profile">
+
+	<xsd:import schemaLocation="SourceSystemUserProfileId.xsd" namespace="http://chubb_corporate/get_access/source_system_user_profile_id">
+	</xsd:import>
+	<xsd:import schemaLocation="Customization.xsd" namespace="http://chubb_corporate/get_access/customization">
+	</xsd:import>
+	<xsd:import schemaLocation="UserAuthorization.xsd" namespace="http://chubb_corporate/get_access/user_authorization">
+	</xsd:import>
+	<xsd:import schemaLocation="AccessControlGroup.xsd" namespace="http://chubb_corporate/get_access/access_control_group">
+	</xsd:import>
+	<xsd:import schemaLocation="ApplicationUserProfile.xsd" namespace="http://chubb_corporate/get_access/application_user_profile">
+	</xsd:import>
+	<xsd:import schemaLocation="RegionAndLanguageSettings.xsd" namespace="http://chubb_corporate/get_access/region_and_language_settings">
+	</xsd:import>
+	<xsd:import schemaLocation="User.xsd" namespace="http://chubb_corporate/get_access/user">
+	</xsd:import>
+
+
+
+
+
+
+
+
+
+	<xsd:complexType name="UserProfile">
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="User" type="bons3:User" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="RegionAndLanguageSettings" type="bons5:RegionAndLanguageSettings">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="AccessControlGroup" type="bons1:AccessControlGroup">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ApplicationUserProfile" type="bons2:ApplicationUserProfile">
+			</xsd:element>
+
+
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="UserAuthorization" type="bons0:UserAuthorization">
+			</xsd:element>
+
+
+
+
+
+
+
+
+
+
+			<xsd:element minOccurs="0" name="UserProfileStatusCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the status of a User Profile.
+Valid values include: 'ACTIVE', 'INACTIVE' or 'PASSWORD EXPIRED'.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UserProfileSourceName" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the source of the User Profile data.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="ExternalUserId" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the the user id assigned to a user who needs to access systems from outside Chubb's network. </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PersonGIN" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a generated identification number associated with a person's External User Id.  </xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CommonUserGIN" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a generated id that is used to identify a user across systems.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+
+
+
+			<xsd:element minOccurs="0" name="Customization" type="bons4:Customization" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SourceSystemUserProfileId" type="bons6:SourceSystemUserProfileId" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="UserProfile" type="UserProfile" /></xsd:schema>

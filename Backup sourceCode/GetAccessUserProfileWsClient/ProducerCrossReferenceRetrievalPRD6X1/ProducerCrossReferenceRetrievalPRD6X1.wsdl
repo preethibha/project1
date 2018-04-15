@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://ei/producer/get_producer_cross_reference_reply_prd6x1" xmlns:bons2="http://ei/producer/get_filtered_producer_cross_ref_list_request_prd6x1" xmlns:bons3="http://ei/producer/get_filtered_producer_cross_ref_list_reply_prd6x1" xmlns:bons4="http://ei/core/simplefault" xmlns:bons5="http://ei/producer/get_producer_id_request_prd6x1" xmlns:bons6="http://ei/producer/get_producer_id_reply_prd6x1" xmlns:tns="http://ei/producer/producer_cross_reference_retrieval_prd6x1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProducerCrossReferenceRetrievalPRD6X1" targetNamespace="http://ei/producer/producer_cross_reference_retrieval_prd6x1">
+    <wsdl:types>
+    <xsd:schema xmlns:bons0="http://ei/producer/get_producer_cross_reference_request_prd6x1" xmlns="http://ei/producer/producer_cross_reference_retrieval_prd6x1" targetNamespace="http://ei/producer/producer_cross_reference_retrieval_prd6x1">
+            <xsd:import namespace="http://ei/producer/get_producer_id_reply_prd6x1" schemaLocation="GetProducerIdReply.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_id_request_prd6x1" schemaLocation="GetProducerIdRequest.xsd" />
+            <xsd:import namespace="http://ei/producer/get_filtered_producer_cross_ref_list_reply_prd6x1" schemaLocation="GetFilteredProducerCrossRefListReply.xsd" />
+            <xsd:import namespace="http://ei/producer/get_filtered_producer_cross_ref_list_request_prd6x1" schemaLocation="GetFilteredProducerCrossRefListRequest.xsd" />
+            <xsd:import namespace="http://ei/core/simplefault" schemaLocation="SimpleFault.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_cross_reference_reply_prd6x1" schemaLocation="GetProducerCrossReferenceReply.xsd" />
+            <xsd:import namespace="http://ei/producer/get_producer_cross_reference_request_prd6x1" schemaLocation="GetProducerCrossReferenceRequest.xsd" />
+      <xsd:element name="GetProducerCrossReference">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerCrossReferenceRequest" nillable="true" type="bons0:GetProducerCrossReferenceRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetProducerCrossReferenceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerCrossReferenceReply" nillable="true" type="bons1:GetProducerCrossReferenceReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="SimpleFaultReply" nillable="true" type="bons4:SimpleFault" />
+            <xsd:element name="GetFilteredProducerCrossRefList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetFilteredProducerCrossRefListRequest" nillable="true" type="bons2:GetFilteredProducerCrossRefListRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetFilteredProducerCrossRefListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetFilteredProducerCrossRefListReply" nillable="true" type="bons3:GetFilteredProducerCrossRefListReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetProducerId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerIdRequest" nillable="true" type="bons5:GetProducerIdRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="GetProducerIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="GetProducerIdReply" nillable="true" type="bons6:GetProducerIdReply" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="GetProducerCrossReferenceRequestMsg">
+    <wsdl:part element="tns:GetProducerCrossReference" name="GetProducerCrossReferenceParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerCrossReferenceResponseMsg">
+    <wsdl:part element="tns:GetProducerCrossReferenceResponse" name="GetProducerCrossReferenceResult" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerCrossReference_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetFilteredProducerCrossRefListRequestMsg">
+    <wsdl:part element="tns:GetFilteredProducerCrossRefList" name="GetFilteredProducerCrossRefListParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetFilteredProducerCrossRefListResponseMsg">
+    <wsdl:part element="tns:GetFilteredProducerCrossRefListResponse" name="GetFilteredProducerCrossRefListResult" />
+  </wsdl:message>
+    <wsdl:message name="GetFilteredProducerCrossRefList_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerIdRequestMsg">
+    <wsdl:part element="tns:GetProducerId" name="GetProducerIdParameters" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerIdResponseMsg">
+    <wsdl:part element="tns:GetProducerIdResponse" name="GetProducerIdResult" />
+  </wsdl:message>
+    <wsdl:message name="GetProducerId_SimpleFaultReplyMsg">
+    <wsdl:part element="tns:SimpleFaultReply" name="SimpleFaultReply" />
+  </wsdl:message>
+    <wsdl:portType name="ProducerCrossReferenceRetrievalPRD6X1">
+    <wsdl:operation name="GetProducerCrossReference">
+      <wsdl:input message="tns:GetProducerCrossReferenceRequestMsg" name="GetProducerCrossReferenceRequest" />
+      <wsdl:output message="tns:GetProducerCrossReferenceResponseMsg" name="GetProducerCrossReferenceResponse" />
+            <wsdl:fault message="tns:GetProducerCrossReference_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+        </wsdl:operation>
+        <wsdl:operation name="GetFilteredProducerCrossRefList">
+      <wsdl:input message="tns:GetFilteredProducerCrossRefListRequestMsg" name="GetFilteredProducerCrossRefListRequest" />
+      <wsdl:output message="tns:GetFilteredProducerCrossRefListResponseMsg" name="GetFilteredProducerCrossRefListResponse" />
+      <wsdl:fault message="tns:GetFilteredProducerCrossRefList_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+        <wsdl:operation name="GetProducerId">
+      <wsdl:input message="tns:GetProducerIdRequestMsg" name="GetProducerIdRequest" />
+      <wsdl:output message="tns:GetProducerIdResponseMsg" name="GetProducerIdResponse" />
+      <wsdl:fault message="tns:GetProducerId_SimpleFaultReplyMsg" name="SimpleFaultReply" />
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

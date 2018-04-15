@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CommercialAccountFileApp">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="CommercialAccountFile.war" deploy-path="/" handle="module:/resource/CommercialAccountFile/CommercialAccountFile">
+            <dependent-object>Module_1422453669795</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommercialAccountFileUtil.jar" deploy-path="/lib" handle="module:/resource/CommercialAccountFileUtil/CommercialAccountFileUtil">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommercialAccountFileServiceClients.jar" deploy-path="/lib" handle="module:/resource/CommercialAccountFileServiceClients/CommercialAccountFileServiceClients">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommercialAccountFileDomain.jar" deploy-path="/lib" handle="module:/resource/CommercialAccountFileDomain/CommercialAccountFileDomain">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommercialAccountFileDomainModel.jar" deploy-path="/lib" handle="module:/resource/CommercialAccountFileDomainModel/CommercialAccountFileDomainModel">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>     
+        <dependent-module archiveName="commons-logging-api-1.1.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/commons/commons-logging-api-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>                  
+        <dependent-module archiveName="Jndi.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/chubb8_5/Jndi.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gaUtils_was8.jar" deploy-path="/lib" handle="module:/classpath/lib/C:/EAS/dbiz/DbizLibraryWorkspace/DigitalBusinessLibrary/vendor/chubb8_5/gaUtils_was8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>           
+    </wb-module>
+</project-modules>

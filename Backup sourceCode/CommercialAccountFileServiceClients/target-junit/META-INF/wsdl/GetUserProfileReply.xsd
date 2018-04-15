@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ei/corporate/get_user_profile_reply_crp31x1" xmlns="http://ei/corporate/get_user_profile_reply_crp31x1" xmlns:bons0="http://ei/core/status_informationx2" xmlns:bons1="http://ei/core/user_profile">
+	<xsd:import namespace="http://ei/core/user_profile" schemaLocation="UserProfile.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://ei/core/status_informationx2" schemaLocation="StatusInformationX2.xsd">
+	</xsd:import>
+	<xsd:complexType name="GetUserProfileReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="UserProfile" type="bons1:UserProfile">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StatusInformation" type="bons0:StatusInformation">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetUserProfileReply" type="GetUserProfileReply"/>
+</xsd:schema>

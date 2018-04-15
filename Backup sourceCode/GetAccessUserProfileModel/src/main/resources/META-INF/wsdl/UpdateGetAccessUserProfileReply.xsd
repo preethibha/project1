@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://chubb_corporate/get_access/status_information" xmlns="http://chubb_corporate/business/update_get_access_user_profile_reply_ebe4x1" targetNamespace="http://chubb_corporate/business/update_get_access_user_profile_reply_ebe4x1">
+	<xsd:import namespace="http://chubb_corporate/get_access/status_information" schemaLocation="StatusInformation.xsd" />
+	<xsd:complexType name="UpdateGetAccessUserProfileReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="StatusInformation" type="bons1:StatusInformation">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="ExternalUserId" type="xsd:string">
+				<xsd:annotation><xsd:documentation>This element contains the the user id assigned to a user who needs to access systems from outside Chubb's network.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="UpdateGetAccessUserProfileReply" type="UpdateGetAccessUserProfileReply" /></xsd:schema>

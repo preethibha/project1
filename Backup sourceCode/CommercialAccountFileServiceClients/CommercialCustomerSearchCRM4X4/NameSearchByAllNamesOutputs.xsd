@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/crm/insuredx2" xmlns="http://ei/crm/name_search_by_all_names_outputs_crm4x4" targetNamespace="http://ei/crm/name_search_by_all_names_outputs_crm4x4">
+	<xsd:import schemaLocation="InsuredX2.xsd" namespace="http://ei/crm/insuredx2">
+	</xsd:import>
+	<xsd:complexType name="NameSearchByAllNamesOutputs">
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="Insured" type="bons0:Insured">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NameSearchMatchScoreNumber" type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BillingAccountIndicator" type="xsd:boolean"><xsd:annotation><xsd:documentation>This element indicates if there is a billing account.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="NameSearchByAllNamesOutputs" type="NameSearchByAllNamesOutputs" /></xsd:schema>

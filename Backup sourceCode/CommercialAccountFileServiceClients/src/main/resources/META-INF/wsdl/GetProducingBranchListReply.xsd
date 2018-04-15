@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://ei/corporate/get_producing_branch_list_reply_crp2x1" xmlns="http://ei/corporate/get_producing_branch_list_reply_crp2x1" xmlns:bons0="http://ei/core/extendedbranch" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:import namespace="http://ei/core/extendedbranch" schemaLocation="ExtendedBranch.xsd">
+	</xsd:import>
+	<xsd:complexType name="GetProducingBranchListReply">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ExtendedBranch" type="bons0:ExtendedBranch">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetProducingBranchListReply" type="GetProducingBranchListReply"/>
+</xsd:schema>

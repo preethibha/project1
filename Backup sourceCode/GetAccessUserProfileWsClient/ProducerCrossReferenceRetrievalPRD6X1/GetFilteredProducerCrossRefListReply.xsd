@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/producer/producer_cross_reference" xmlns:bons1="http://ei/core/status_informationx2" xmlns="http://ei/producer/get_filtered_producer_cross_ref_list_reply_prd6x1" targetNamespace="http://ei/producer/get_filtered_producer_cross_ref_list_reply_prd6x1">
+	<xsd:import schemaLocation="StatusInformationX2.xsd" namespace="http://ei/core/status_informationx2">
+	</xsd:import>
+	<xsd:import schemaLocation="ProducerCrossReference.xsd" namespace="http://ei/producer/producer_cross_reference">
+	</xsd:import>
+	<xsd:complexType name="GetFilteredProducerCrossRefListReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ProducerCrossReference" type="bons0:ProducerCrossReference" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StatusInformation" type="bons1:StatusInformation">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="GetFilteredProducerCrossRefListReply" type="GetFilteredProducerCrossRefListReply" /></xsd:schema>

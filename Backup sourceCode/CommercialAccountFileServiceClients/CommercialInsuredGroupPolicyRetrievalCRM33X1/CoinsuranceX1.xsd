@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://ei/crm/coinsurancex1" targetNamespace="http://ei/crm/coinsurancex1">
+	<xsd:complexType name="Coinsurance">
+		<xsd:annotation>
+      
+    </xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="CoinsuranceCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a code which indicates the company with which there is coinsurance.
+
+
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ConinsuranceName" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the name of the company with which there is coinsurance.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CoinsurancePremiumPercent" type="xsd:decimal">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the percentage of the gross premium ceded to the coninsurer.
+
+
+
+</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ConinsurancePremiumAmount" type="xsd:decimal">
+				<xsd:annotation>
+          
+        <xsd:documentation>This element contains the amount of the gross premium ceded to the coinsurer.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CoinsuranceCurrencyCode" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a code which indentifies the currency of the coinsurnace amount.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CoinsurancePolicyReferenceNumber" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the symbol for identifying the Policy Number used by the Coinsurance Company to identify their contract.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CoinsuranceCommissionPercent" type="xsd:decimal">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the commission percent applied to the coinsurance portion of the premium.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CoinsuranceCommissionAmount" type="xsd:decimal">
+				<xsd:annotation>
+          <xsd:documentation>This element contains the commission amount  applied to the coinsurance portion of the premium.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CoinsuranceCancelReasonDescription" type="xsd:string">
+				<xsd:annotation>
+          <xsd:documentation>This element contains a description of the reason for the cancellation of the coinsurance.</xsd:documentation>
+        </xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="Coinsurance" type="Coinsurance" /></xsd:schema>

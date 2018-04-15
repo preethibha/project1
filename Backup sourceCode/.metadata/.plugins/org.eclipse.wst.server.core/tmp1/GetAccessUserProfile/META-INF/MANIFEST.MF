@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Ignore-Scanning-Archives: 
+Class-Path: DigitalBusinessCommon.jar 
+ GetAccessUserProfileDomain.jar 
+ GetAccessUserProfileModel.jar 
+ GetAccessUserProfilePersistence.jar 
+ GetAccessUserProfileUtil.jar
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="FavoritesSelectionPopupDialog">
+		<item value="379" key="com.ibm.team.process.internal.rcp.ui.teamnavigator.favorites.FavoritesSelectionPopupDialogDIALOG_WIDTH"/>
+		<item value="true" key="com.ibm.team.process.internal.rcp.ui.teamnavigator.favorites.FavoritesSelectionPopupDialogDIALOG_USE_PERSISTED_LOCATION"/>
+		<item value="779" key="com.ibm.team.process.internal.rcp.ui.teamnavigator.favorites.FavoritesSelectionPopupDialogDIALOG_X_ORIGIN"/>
+		<item value="348" key="com.ibm.team.process.internal.rcp.ui.teamnavigator.favorites.FavoritesSelectionPopupDialogDIALOG_Y_ORIGIN"/>
+		<item value="true" key="com.ibm.team.process.internal.rcp.ui.teamnavigator.favorites.FavoritesSelectionPopupDialogDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="270" key="com.ibm.team.process.internal.rcp.ui.teamnavigator.favorites.FavoritesSelectionPopupDialogDIALOG_HEIGHT"/>
+	</section>
+</section>

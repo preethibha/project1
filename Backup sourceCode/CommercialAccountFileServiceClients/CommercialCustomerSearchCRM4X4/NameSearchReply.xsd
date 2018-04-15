@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://ei/crm/name_search_outputs_crm4x4" xmlns="http://ei/crm/name_search_reply_crm4x4" targetNamespace="http://ei/crm/name_search_reply_crm4x4">
+	<xsd:import schemaLocation="NameSearchOutputs.xsd" namespace="http://ei/crm/name_search_outputs_crm4x4">
+	</xsd:import>
+	<xsd:complexType name="NameSearchReply">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="NameSearchOutputs" type="bons0:NameSearchOutputs" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MoreDataAvailableIndicator" type="xsd:boolean"><xsd:annotation><xsd:documentation>This element is used to indicate if more data is available that is not being returned.</xsd:documentation></xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+<xsd:element name="NameSearchReply" type="NameSearchReply" /></xsd:schema>

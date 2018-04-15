@@ -1,0 +1,138 @@
+/** This is going to have to be moved to a chubb.css level **/
+#global-message.message-area {
+    font-size: 16px;
+    line-height: 1.3;}
+#global-message > div {
+    position: relative;
+    overflow: auto;}
+#global-message span {
+    display: inline-block;
+    float: left;} 
+.message-area {
+	display: none;
+    border: 1px solid #ddd1d1;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 rgba(50, 50, 50, 0.3);
+    color: #322222;
+    font-weight: 500;
+	font-size: 16px;
+    margin: 0 0 1.5% 0;
+    padding: 5px;}
+.message-area.error, .message-area.success, .message-area.info {
+	display: block;}
+.message-area span {
+    margin: 0 0 0 40px;
+    font-family: arial;
+    display: inline-block;}
+.message-area img {
+    left: 12px;
+    position: absolute;
+    top: 10px;
+    padding-right: 5px;
+    vertical-align: middle;}
+.message-area.error img {
+    background: url('../images/icons_sprites.png') no-repeat -230px -230px;
+	height: 27px;
+    width: 27px;}
+.message-area.info img {
+	background: url('../images/icons_sprites.png') no-repeat -307px -230px;
+	width: 27px;
+	height: 27px;}
+.message-area.success img {
+	background: url('../images/icons_sprites.png') no-repeat -271px -230px;
+	width: 27px;
+	height: 27px;}
+.message-area > div {
+    position: relative;
+    min-height: 27px;
+    padding: 10px;}
+.message-area.error > div {
+    background: #F8A8A8;}
+.message-area.success > div {
+    background: #ddffde;}
+.message-area.info > div {
+    background: #CFEDFF;}
+.icon-phone {
+    background: url("../images/icons_sprites.png") no-repeat 0 0;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 26px;}
+.icon-user {
+	background: url('../images/icons_sprites.png') no-repeat 0 -32px;
+	width: 29px;
+	height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.icon-calendar {
+	background: url('../images/icons_sprites.png') no-repeat -2px -76px;
+	width: 30px;
+	height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.icon-doc {
+	background: url('../images/icons_sprites.png') no-repeat 0 -165px;
+	width: 19px;
+	height: 23px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.icon-alert-red {
+	background: url('../images/icons_sprites.png') no-repeat 0 -200px;
+	width: 24px;
+	height: 22px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.icon-users {
+	background: url('../images/icons_sprites.png') no-repeat 0 -126px;
+	width: 48px;
+	height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.icon-news {
+	background: url('../images/sprites-s4255ca54c8.png') no-repeat 0 -1133px;
+	width: 20px;
+	height: 15px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.icon-important-msg {
+	background: url('../images/sprites-s4255ca54c8.png') no-repeat 0 -993px;
+	width: 22px;
+	height: 17px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.icon-video {
+	background: url('../images/sprites-s4255ca54c8.png') no-repeat 0 -1552px;
+	width: 19px;
+	height: 15px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.icon-info {
+	background: url('../images/icons_sprites.png') no-repeat 0 -232px;
+	width: 17px;
+	height: 17px;
+    margin-right: 10px;
+    margin-top: -3px;
+    vertical-align: middle;}
+
+/****  */
+
+/* Rebranding CSS Changes */
+.message-area {
+	border:none;
+	border-radius:0px;
+	box-shadow:none;
+	padding:0;
+}
+.message-area.info > div {
+	background: #B2EDF3;
+}
+.message-area span {
+	font-family: "Chubb Publico Web Light", "Georgia";
+}
+
+/*Rebranding CSS Media Queries */
+@media (max-width: 767px) {
+	.message-area {
+		margin-bottom:18px;
+	}
+}
