@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Ignore-Scanning-Archives: CommercialBookOfBusinessWeb.jar, 
- CommercialBookOfBusinessDomainModel.jar, CommercialBookOfBusinessUtil.jar, CommercialBo
- okOfBusiness.jar, Jndi.jar, jsf-ibm.jar, icu4j_3_4_1.jar, JSON4J.jar
- , tiles-compat-2.1.0.jar, tiles-jsp-2.1.0.jar, tiles-portlet-2.1.0.ja
- r, tiles-servlet-2.1.0.jar, commons-beanutils.jar, commons-digester.j
- ar, commons-codec-1.9.jar
-

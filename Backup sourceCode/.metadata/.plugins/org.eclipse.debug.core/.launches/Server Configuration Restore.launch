@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="com.ibm.ws.ast.st.common.ext.exportServerConfigLaunchConfigurationType">
-<stringAttribute key="serverName" value="WebSphere Application Server v8.5 at localhost"/>
-<stringAttribute key="wasArchiveFilePath" value="C:/Preeti/caf/.metadata/.plugins/com.ibm.ws.ast.st.v85.core/tmp0/server.car"/>
-<stringAttribute key="wasProfilePath" value="C:/Program Files (x86)/IBM/WebSphere/AppServer/profiles/AppSrv1/bin/wsadmin.bat"/>
-</launchConfiguration>

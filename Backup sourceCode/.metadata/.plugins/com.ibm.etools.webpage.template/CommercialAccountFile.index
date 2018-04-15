@@ -1,8 +1,0 @@
-File=WebContent/templates/CAFTemplate.jtpl
-  FileStamp=17237
-  FileHasTplNodes=true
-  FileGetNodes=%7Cheadarea%7Cbodyarea%7Cadditional_js
-File=WebContent/templates/StandaloneAppTemplate.jtpl
-  FileStamp=17238
-  FileHasTplNodes=true
-  FileGetNodes=%7Cheadarea%7Cbodyarea%7Cadditional_js

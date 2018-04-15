@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: Hc.jar 
- Jndi.jar 
- commons-digester3-3.2-with-deps.jar
-
